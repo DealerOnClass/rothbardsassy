@@ -1,0 +1,23 @@
+$primary__color: #003f7a;
+$primary__color--dark: darken($primary__color, 5%);
+
+$accent__color: #fa6900;
+$accent__color--dark: darken($accent__color, 5%);
+
+$white: #fff;
+$black: #000;
+
+$neutral__color--uber-light: #f3f3f3;
+$neutral__color--light: #eee;
+$neutral__color: #ddd;
+$neutral__color--medium: #ccc;
+$neutral__color--dark: #888;
+
+$screen--desktop--min: 1200px;
+$screen--desktop: 1199px;
+$screen--tablet--min: 992px;
+$screen--tablet: 991px;
+$screen--mobile--min: 768px;
+$screen--mobile: 767px;
+$screen--tiny--min: 480px;
+$screen--tiny: 479px;

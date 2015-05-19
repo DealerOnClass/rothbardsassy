@@ -1,0 +1,42 @@
+@mixin media($type) {
+    @if $type == desktop--min {
+        @media only screen and (min-width: $screen--desktop--min) {
+            @content;
+        }
+    }
+    @elseif $type == desktop {
+        @media only screen and (max-width: $screen--desktop) {
+            @content;
+        }
+    }
+    @elseif $type == tablet--min {
+        @media only screen and (min-width: $screen--tablet--min) {
+            @content;
+        }
+    }
+    @elseif $type == tablet {
+        @media only screen and (max-width: $screen--tablet) {
+            @content;
+        }
+    }
+    @elseif $type == mobile--min {
+        @media only screen and (min-width: $screen--mobile--min) {
+            @content;
+        }
+    }
+    @elseif $type == mobile {
+        @media only screen and (max-width: $screen--mobile) {
+            @content;
+        }
+    }
+    @elseif $type == tiny--min {
+        @media only screen and (min-width: $screen--tiny--min) {
+            @content;
+        }
+    }
+    @elseif $type == tiny {
+        @media only screen and (max-width: $screen--tiny) {
+            @content;
+        }
+    }
+}

@@ -1,0 +1,323 @@
+@include critical(true){
+    body {
+        font-family: Arial, Helvetica, sans-serif
+    }
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, nav {
+        font-family: 'proxima_nova_rgbold', Arial, Helvetica, sans-serif
+    }
+    hr {
+        border-top-color: $neutral__color
+    }
+    .text-white {
+        color: $white;
+    }
+    .text-main {
+        color: $primary__color;
+    }
+    .text-cta {
+        color: $accent__color
+    }
+    .text-alt {
+        color: #38a6e1
+    }
+    @include media(tablet) {
+        body, .btn, .dropdown-menu, .form-control {
+            font-size: 13px
+        }
+    }
+    .contentSectionO {
+        background-color: $neutral__color--uber-light;
+    }
+
+    .bannerWrapper {
+        background-color: $white;
+    }
+    .bg-main, .offerBlock {
+        background-color: $primary__color;
+        border: 1px solid transparent;
+        color: $white;
+    }
+    .bg-cta {
+        background-color: $accent__color;
+        border: 1px solid transparent
+    }
+    .bg-alt, .bg-alt1, .panel-heading.bg-alt {
+        background-color: #38a6e1;
+        border: 1px solid transparent;
+        color: $white;
+    }
+    footer {
+        background-color: $neutral__color--uber-light;
+    }
+    @include media(mobile) {
+        .snap-content {
+            background-color: $white!important;
+        }
+    }
+    @include media(tablet) {
+        .contentTop {
+            padding: .5em 0
+        }
+    }
+    a {
+        color: $primary__color;
+    }
+    a:hover, .btn:hover, .btn:active, .btn:focus {
+        color: $primary__color--dark;
+    }
+    .panel, .panel-heading, .panel-footer {
+        border-radius: 0
+    }
+    .panel {
+        box-shadow: none
+    }
+    .panel-title {
+        font-weight: bold
+    }
+    .well {
+        box-shadow: none;
+        border-radius: 0
+    }
+    .nav-tabs.nav-justified>li>a, .nav-tabs>li>a {
+        background-color: $neutral__color--light
+    }
+    .nav-tabs.nav-justified>.active>a {
+        border-bottom-color: transparent
+    }
+    .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+        background-color: $white;
+    }
+    .well .nav-tabs.nav-justified>.active>a {
+        background-color: $neutral__color--uber-light;;
+    }
+    .well .panel .nav-tabs.nav-justified>.active>a {
+        background-color: $white;
+    }
+    .nav-pills li.active a, .nav-pills li.active a:hover, .nav-pills li.active a:focus {
+        background-color: $primary__color;
+        border-color: transparent;
+        color: $white;
+    }
+    .input-group-sm>.form-control, .input-group-sm>.input-group-addon, .input-group-sm>.input-group-btn>.btn {
+        border-radius: 0
+    }
+    .pagination .active a, .pagination .active span, .pagination .active a:hover, .pagination .active span:hover, .pagination .active a:focus, .pagination .active span:focus {
+        background-color: $neutral__color--medium;
+        border-color: transparent;
+        color: $white;
+    }
+    .btn-cta {
+        color: $white;
+        background: $accent__color;
+        border-color: $accent__color
+    }
+    .btn-cta:hover, .btn-cta:focus, .btn-cta:active, .btn-cta.active, .open>.dropdown-toggle.btn-cta {
+        color: $white;
+        background: $accent__color--dark;
+        border-color: $accent__color--dark
+    }
+    .btn-main, .btn-alt3.active {
+        color: $white;
+        background-color: $primary__color;
+        border-color: $primary__color;
+    }
+    .btn-main:hover, .btn-main:focus, .btn-main:active, .btn-main.active, .open .dropdown-toggle.btn-main {
+        color: $white;
+        background-color: $primary__color--dark;
+        border-color: $primary__color--dark;
+    }
+    .btn-alt1 {
+        color: $black;
+        background-color: $white;
+        border-color: $neutral__color
+    }
+    .btn-alt1:hover, .btn-alt1:focus, .btn-alt1:active, .btn-alt1.active, .open .dropdown-toggle.btn-alt1, .nav .btn-alt1:hover, .nav .btn-alt1:focus, .nav .btn-alt1:active, .nav .btn-alt1.active {
+        color: $black;
+        background-color: $neutral__color--light;
+        border-color: $neutral__color--medium
+    }
+    .btn-alt2 {
+        color: $black;
+        background-color: $neutral__color;
+        border-color: $neutral__color--medium
+    }
+    .btn-alt2:hover, .btn-alt2:focus, .btn-alt2:active, .btn-alt2.active, .open .dropdown-toggle.btn-alt2, .nav .btn-alt2:hover, .nav .btn-alt2:focus, .nav .btn-alt2:active, .nav .btn-alt2.active {
+        color: $black;
+        background-color: darken($neutral__color--medium, 5%);
+        border-color: darken($neutral__color--medium, 5%)
+    }
+    .btn-alt3 {
+        color: $white;
+        background-color: $neutral__color--dark;
+        border-color: $neutral__color--dark
+    }
+    .btn-alt3:hover, .btn-alt3:focus, .btn-alt3:active, .open .dropdown-toggle.btn-alt3, .nav .btn-alt3:hover, .nav .btn-alt3:focus, .nav .btn-alt3:active {
+        color: $white;
+        background-color: darken($neutral__color--dark, 5%);
+        border-color: darken($neutral__color--dark, 5%)
+    }
+    .btn-nav1, .btn-nav2 {
+        color: $black;
+        background-color: transparent;
+        border-color: transparent $neutral__color transparent transparent
+    }
+    .btn-nav1:hover, .btn-nav1:focus, .btn-nav1:active, .btn-nav1.active, .open .dropdown-toggle.btn-nav1, .btn-nav2:hover, .btn-nav2:focus, .btn-nav2:active, .btn-nav2.active, .open .dropdown-toggle.btn-nav2 {
+        color: $black;
+        background-color: $neutral__color;
+        border-color: $neutral__color
+    }
+    .certifiedPreOwned {
+        background: url(images/certifiedPreOwnedVeh.png) no-repeat right bottom
+    }
+    .quickNav3Pic>div:hover {
+        opacity: .9
+    }
+    @include media(mobile) {
+        .mobileSearchNewBlock, .mobileSearchUsedBlock, .mobileViewSpecialsBlock {
+            position: relative;
+            border-top: 2px solid $white;
+        }
+        .searchNewBlockM .btn, .searchUsedBlockM .btn, .specialsBlockM .btn {
+            font-size: 20px
+        }
+        .searchNewBlockM, .searchUsedBlockM, .specialsBlockM {
+            position: absolute;
+            top: 25%;
+            left: 5%
+        }
+    }
+    #block1 {
+        padding-left: 0;
+        padding-right: 0;
+        background: rgba(255, 255, 255, 1);
+        padding-bottom: 25px;
+        -moz-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1)
+    }
+    #inventorySearchWidget #isTitleSection {
+        background: #ff7b1a;
+        border: 1px solid transparent;
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding: 12px 0 12px 25px;
+        overflow: hidden;
+    }
+    #inventorySearchWidget .isTitle {
+        font-weight: normal!important;
+        font-size: 22px;
+        color: $white;
+    }
+    #inventorySearchWidget .input-group-sm .form-control {
+        height: 32px!important
+    }
+    #frmisSubmitButton {
+        margin-top: 10px
+    }
+    #isVehicleTypeSection, #isVehicleInfo, #frmisSubmitButton {
+        padding: 0 25px
+    }
+    .modelBar.panel {
+        border: 0;
+        padding: 0 1em;
+        margin: 0;
+        background: 0
+    }
+    .ttMpg, .ttYear, .ttMake {
+        display: none
+    }
+    #modelBarWidget .vehicle, .mbCustomBtn {
+        cursor: pointer
+    }
+    .modelBar .mbPopUpTitle {
+        margin: 4px 0 8px
+    }
+    .modelBar .ptMpg {
+        position: absolute;
+        bottom: -10px;
+        right: 0;
+        font-weight: bold;
+        background-color: $neutral__color--light;
+        padding: 6px 8px 2px;
+        border-radius: 4px 0 4px 0
+    }
+    .modelBar .ptMpgLabel {
+        font-size: 11px
+    }
+    .modelBar .popoverTitle .btn {
+        margin: 0 0 8px;
+        text-align: center
+    }
+    .modelBar .popoverTitle .col-sm-6 {
+        padding-left: 4px;
+        padding-right: 4px
+    }
+    .modelBar .popoverTitle.row {
+        padding: 0 10px
+    }
+    .modelBar .col-model-thumb {
+        position: relative;
+        margin: -5px 0
+    }
+    .modelBar .ttMpg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0
+    }
+    .mbThumbTitle {
+        margin-top: -10px;
+        color: #333
+    }
+    @include media(tablet--min) {
+        .modelBar.panel {
+            border: 0;
+            padding: 0 1em
+        }
+    }
+    // @media(min-width:992px) {
+    //     .fixedHeaderArea {
+    //         background: $white;
+    //         left: 0;
+    //         position: fixed;
+    //         right: 0;
+    //         z-index: 1030
+    //     }
+    //     .fixedHeaderArea ~ #content {
+    //         padding-top: 123px
+    //     }
+    // }
+    .fixedBgSec {
+        position: relative;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-image: none\9!important
+    }
+    .vehiclePriceDrop .fa, li.savePrice {
+        color: $primary__color;
+    }
+    #offerBar {
+        background-image: url('http://cdn.dlron.us/assets/misc/9682/images/MobileLeadDriver.png');
+        min-height: 100px;
+        cursor: pointer;
+    }
+    @include media(desktop) {
+        #offerBar {
+            background: url('http://cdn.dlron.us/assets/misc/9682/images/MobileLeadDriver.png')no-repeat 0px -100px;
+        }
+    }
+    @include media(tablet) {
+        #offerBar {
+            background: url('http://cdn.dlron.us/assets/misc/9682/images/MobileLeadDriver.png')no-repeat 0px -200px;
+        }
+    }
+    @include media(mobile) {
+        #offerBar {
+            background: url('http://cdn.dlron.us/assets/misc/9682/images/MobileLeadDriver.png')no-repeat center -300px;
+        }
+    }
+}

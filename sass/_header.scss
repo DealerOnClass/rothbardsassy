@@ -1,0 +1,48 @@
+@include critical(true) {
+    .desktop .fb,.desktop .tw,.desktop .yt,.desktop .gp,.desktop .lin,.desktop .pt,.desktop .ig,.desktop .blog,.desktop .flicker,.desktop .tel3,.desktop .tel4,.desktop .dealerName,.mobile .dealerName{
+        display:none
+    }
+
+    .desktop .tel li label{
+        margin-bottom:0
+    }
+
+    .socialMedia .fa{
+        font-size:1.6em
+    }
+
+    .desktop .dealerLogo img{
+        height:55px
+    }
+
+    @include media(tablet) {
+        .desktop .dealerLogo img{
+            height:40px
+        }
+
+        .desktop .manuLogo img{
+            width:80px
+        }
+
+    }
+
+    @include media(mobile) {
+        .mobile .manuLogo img{
+            height:45px;
+            margin-right:10px
+        }
+
+        .mobile .dealerLogo img{
+            height:30px;
+            margin-top:8px
+        }
+
+    }
+
+    @media(max-width:370px){
+        .mobile .manuLogo{
+            display:none
+        }
+
+    }
+}

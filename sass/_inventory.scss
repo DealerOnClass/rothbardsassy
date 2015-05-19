@@ -1,0 +1,34 @@
+@include critical(true) {
+    #inventorySearchWidget .isTitle {
+        font-weight: bold
+    }
+    #inventorySearchWidget .radio-inline label {
+        font-size: 14px
+    }
+    #inventorySearchWidget .input-group-sm .form-control {
+        height: 26px;
+        padding: 4px 5px
+    }
+    @include media(desktop) {
+        #inventorySearchWidget .input-group-sm .form-control {
+            height: 22px;
+            padding: 2px 5px
+        }
+        #inventorySearchWidget .margin-bottom_5x {
+            margin-bottom: .25em
+        }
+    }
+    @include media(tablet) {
+        #block1 {
+            margin-bottom: 10px
+        }
+        #inventorySearchWidget .input-group-sm .form-control {
+            height: 30px
+        }
+    }
+    @include media(mobile) {
+        #inventorySearchWidget .input-group-sm .form-control {
+            height: 36px
+        }
+    }
+}

@@ -1,0 +1,40 @@
+@include critical(true){
+    #block1 {
+        margin: 4em 0 5em 0;
+    }
+    .bannerWrapper {
+        background-color: #f3f3f3;
+        background: #000 url("http://cdn.dlron.us/assets/styles/599/images/banner15Colorado.jpg") no-repeat center center;
+    }
+    .contentSection3 {
+        background-color: #000;
+        background-image: url("http://cdn.dlron.us/assets/styles/599/images/genericChevyServiceDarkBg.jpg");
+    }
+    .contentSection5 {
+        background-color: #f3f3f3;
+        background-image: url("http://cdn.dlron.us/assets/styles/599/images/mtsFaded.jpg");
+    }
+    #block6, .desktop .headerBtns {
+        display: none;
+    }
+}
+@include critical(false){
+    @include media(mobile--min) {
+        .contentSection2 {
+            padding: 3em 0;
+        }
+    }
+}
+@include critical(true){
+    .overallRatingSection {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+    }
+    .reviewsSection .fa {
+        color: #fabe28;
+    }
+    .reviewItemMiddle {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+}
