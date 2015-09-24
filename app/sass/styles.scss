@@ -1,5 +1,13 @@
+html {
+    font-size: 100%;
+}
 body {
-    display: flex;
+    font-family: sans-serif;
+    line-height: 1.4;
+
+    max-width: 30em;
+    margin: 2em auto 0;
+    padding: 0 1em;
+
     color: black;
 }
-
