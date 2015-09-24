@@ -3,6 +3,7 @@
 var gulp       = require('gulp'),
     autoprefix = require('gulp-autoprefixer'),
     concat     = require('gulp-concat'),
+    inline     = require('gulp-inline-source'),
     minify     = require('gulp-minify-html'),
     sass       = require('gulp-sass'),
     uglify     = require('gulp-uglify'),
@@ -17,7 +18,7 @@ var js__src      = 'app/js/*.js',
     html__build  = 'build',
     sass__src    = 'app/sass/**/*.scss',
     sass__build  = 'build/css',
-    server__path = 'build';
+    server__path = '.';
 
 //  01__Scripts
 //
@@ -44,22 +45,31 @@ gulp.task('styles', function() {
 
 //  03__Html
 //
-gulp.task('html', function () {
+gulp.task('html', function() {
     gulp.src(html__src)
         .pipe(minify())                  // minify html
         .pipe(gulp.dest(html__build))    // output
         .pipe(reload({ stream: true })); // reload server
 });
 
-//  04__Serve
+//  04__Inline
 //
-gulp.task('serve', ['scripts', 'styles', 'html'], function() {
+gulp.task('inline', ['scripts', 'styles', 'html'], function() {
+    gulp.src(html__build + '/index.html')
+        .pipe(inline())
+        .pipe(gulp.dest(server__path));
+});
+
+
+//  05__Serve
+//
+gulp.task('serve', ['inline'], function() {
     sync.init({ server: server__path }); // declare server
-    gulp.watch(js__src,   ['scripts']);  // on js change
-    gulp.watch(sass__src, ['styles']);   // on sass change
-    gulp.watch(html__src, ['html']);     // on html change
+    gulp.watch(js__src,   ['inline']);   // on js change
+    gulp.watch(sass__src, ['inline']);   // on sass change
+    gulp.watch(html__src, ['inline']);   // on html change
 });
 
 //  Default
 //
-gulp.task('default', ['serve']);         // run
+gulp.task('default', ['serve']);        // run
