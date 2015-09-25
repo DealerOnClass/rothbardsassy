@@ -1,0 +1,12 @@
+.navbar-text {
+    margin-right: $navbar-text__horizontal-margin;
+    margin-bottom: 0;
+    margin-left: $navbar-text__horizontal-margin;
+    padding-top: $navbar-text__vertical-padding;
+    padding-bottom: $navbar-text__vertical-padding;
+
+    @media (min-width: $grid-float-breakpoint) {
+        float: left;
+    }
+}
+

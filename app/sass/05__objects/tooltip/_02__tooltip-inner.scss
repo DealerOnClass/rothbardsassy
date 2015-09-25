@@ -1,0 +1,11 @@
+.tooltip-inner {
+    max-width: $tooltip-inner__max-width;
+    padding: $tooltip-inner__padding;
+
+    text-align: center;
+
+    color: $tooltip-inner__color;
+    border-radius: $tooltip-inner__radius;
+    background-color: $tooltip-inner__bg;
+}
+

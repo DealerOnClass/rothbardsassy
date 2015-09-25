@@ -1,0 +1,10 @@
+.panel {
+    overflow: hidden;
+
+    margin-bottom: $panel__vertical-rhythm;
+
+    border: $one__pixel solid transparent;
+    border-radius: $panel__radius;
+    background-color: $panel__bg;
+    box-shadow: $panel__shadow;
+}

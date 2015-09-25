@@ -1,0 +1,23 @@
+.label-default {
+    @include label-variant($label--default__bg);
+}
+
+.label-primary {
+    @include label-variant($label--primary__bg);
+}
+
+.label-success {
+    @include label-variant($label--success__bg);
+}
+
+.label-info {
+    @include label-variant($label--info__bg);
+}
+
+.label-warning {
+    @include label-variant($label--warning__bg);
+}
+
+.label-danger {
+    @include label-variant($label--danger__bg);
+}

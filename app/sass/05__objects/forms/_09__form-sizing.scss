@@ -1,0 +1,40 @@
+.input-sm {
+    font-size: $form--small__font-size;
+}
+
+.form-group-sm {
+    %form-control-sm-item {
+        //padding-top:        $form--small__vertical-rhythm;
+        //padding-bottom:     $form--small__vertical-rhythm;
+        font-size: $form--small__font-size;
+    }
+
+    .form-control {
+        @extend %form-control-sm-item;
+    }
+
+    .form-control-static {
+        @extend %form-control-sm-item;
+    }
+}
+
+.input-lg {
+    font-size: $form--large__font-size;
+}
+
+.form-group-lg {
+    %form-control-lg-item {
+        //padding-top:        $form--large__vertical-rhythm;
+        //padding-bottom:     $form--large__vertical-rhythm;
+        font-size: $form--large__font-size;
+    }
+
+    .form-control {
+        @extend %form-control-lg-item;
+    }
+
+    .form-control-static {
+        @extend %form-control-lg-item;
+    }
+}
+

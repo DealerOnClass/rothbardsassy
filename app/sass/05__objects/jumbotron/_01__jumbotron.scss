@@ -1,0 +1,26 @@
+.jumbotron {
+    padding:           $jumbotron__padding;
+    margin-bottom:     $jumbotron__vertical-rhythm;
+    color:             $jumbotron__color;
+    background-color:  $jumbotron__bg;
+    font-size:         $jumbotron__font-size;
+
+    h1,
+    .h1 {
+        color: $jumbotron__heading-color;
+    }
+
+    > hr {
+        border-top-color: darken($jumbotron__bg, 10%);
+    }
+
+    .container &,
+    .container-fluid & {
+        border-radius: $jumbotron__radius; // Only round corners at higher resolutions if contained in a container
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}
+

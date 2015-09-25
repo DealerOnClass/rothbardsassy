@@ -1,0 +1,55 @@
+//  Pager Base
+.pager {
+    padding-left:  0;
+    list-style:    none;
+    text-align:    center;
+    @include clearfix;
+    li {
+        display: inline;
+        > a,
+        > span {
+            display:           inline-block;
+            padding:           $pager__link__vertical-padding $pager__link__horizontal-padding;
+            background-color:  $pager__link__bg;
+            border:            $one__pixel solid $pager__link__border;
+            border-radius:     $pager__link__radius;
+        }
+
+        > a:hover,
+        > a:focus {
+            text-decoration:   none;
+            background-color:  $pager__link--hover__bg;
+        }
+    }
+
+
+    .disabled {
+        > a,
+        > a:hover,
+        > a:focus,
+        > span {
+            color:             $pager__link--disabled__color;
+            background-color:  $pager__link__bg;
+            cursor:            $cursor-disabled;
+        }
+    }
+}
+
+
+//  Pager Next
+.pager .next,
+.pager-next {
+    > a,
+    > span {
+        float: right;
+    }
+}
+
+//  Pager Previous
+.pager .previous,
+.pager-prev {
+    > a,
+    > span {
+        float: left;
+    }
+}

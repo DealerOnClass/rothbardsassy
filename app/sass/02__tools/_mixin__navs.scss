@@ -1,0 +1,28 @@
+@mixin nav-pills-variant($class, $background) {
+
+    $color:       check-color($background, 70, red, white);
+    $background:  $background;
+
+    .nav-pills-#{$class} {
+        > li {
+
+            > a {
+                background-color:  $background;
+                color:             $color;
+
+                &:hover,
+                &:focus {
+                    background-color:  shade($background, 20%);
+                }
+            }
+
+            &.active > a {
+                &,
+                &:hover,
+                &:focus {
+                    background-color:  shade($background, 20%);
+                }
+            }
+        }
+    }
+}

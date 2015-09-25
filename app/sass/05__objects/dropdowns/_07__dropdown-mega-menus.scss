@@ -1,0 +1,86 @@
+.dropdown-mega-menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: auto;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: rhythm(1);
+    padding-right: $global__gutter/2;
+    padding-left: $global__gutter/2;
+
+    border: $one__pixel solid $dropdown-mega-menu__border;
+    border-radius: 0;
+    background-color: $dropdown-mega-menu__bg;
+    box-shadow: 0 $six__pixels $twelve__pixels rgba(0,0,0,0.175);
+
+    @media (min-width:  $screen-sm-min) {
+        position: absolute;
+        top: 101%;
+        right: ( $global__gutter / 2 );
+
+        width: $container-sm - $global__gutter;
+        margin-right: ( $global__gutter/2 ) * -1;
+        margin-left: ( $global__gutter/2 ) * -1;
+
+        border-radius: $dropdown-mega-menu__radius;
+
+        li {
+            margin-right: ( $global__gutter/2 ) * -1;
+            margin-left: ( $global__gutter/2 ) * -1;
+        }
+    }
+
+    @media (min-width: $screen-md-min) {
+        width: $container-md - $global__gutter;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: $container-lg - $global__gutter;
+    }
+
+    li > a {
+        display: block;
+        clear: both;
+
+        padding: $dropdown-mega-menu__link__padding;
+
+        white-space: nowrap;
+
+        color: $dropdown-mega-menu__link__color;
+
+        &:hover,
+        &:focus {
+            color: $dropdown-mega-menu__link--hover__color;
+            background-color: $dropdown-mega-menu__link--hover__bg;
+        }
+    }
+
+    .active > a {
+        &,
+        &:hover,
+        &:focus {
+            color: $dropdown-mega-menu__link--active__color;
+            background-color: $dropdown-mega-menu__link--active__bg;
+        }
+    }
+
+    .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+            color: $dropdown-mega-menu__link--disabled__color;
+        }
+
+        &:hover,
+        &:focus {
+            cursor: $cursor-disabled;
+            text-decoration: none;
+
+            background-color: transparent;
+            background-image: none; // Remove CSS gradient
+
+            @include reset-filter;
+        }
+    }
+}

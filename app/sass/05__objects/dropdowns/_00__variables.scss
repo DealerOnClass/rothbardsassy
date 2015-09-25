@@ -1,0 +1,36 @@
+//  Units
+$dropdown__radius:                      $global__radius;
+$dropdown__x:                           $global__x;
+$dropdown__y:                           $global__y;
+//  Options
+$dropdown__caret-use-icon:              false !default;
+//  Dropdown-Menu
+$dropdown-menu__bg:                     $gray__01;
+$dropdown-menu__border:                 $gray__02;
+$dropdown-menu__radius:                 $dropdown__radius;
+$dropdown-menu__divider__bg:            $gray__02;
+$dropdown-menu__link__padding:          $dropdown__y $dropdown__x;
+$dropdown-menu__link__color:            $body__color;
+$dropdown-menu__link--hover__color:     $body__color;
+$dropdown-menu__link--hover__bg:        shade($gray__01, 05%);
+$dropdown-menu__link--active__color:    $gray__06;
+$dropdown-menu__link--active__bg:       $gray__06;
+$dropdown-menu__link--disabled__color:  $gray__06;
+//  Dropdown-Header
+$dropdown-header__font-size:            $h6__font-size;
+$dropdown-header__color:                $body__color;
+$dropdown-header__vertical-padding:     .5;      // Using Rem
+$dropdown-header__horizontal-padding:   .5;      // Using Rem
+//  Dropdown-Mega-Menu
+$dropdown-mega-menu__bg:                     $gray__01;
+$dropdown-mega-menu__border:                 $gray__02;
+$dropdown-mega-menu__radius:                 $dropdown__radius;
+//  Dropdown-Mega-Menu Link
+$dropdown-mega-menu__link__padding:          $dropdown__y $dropdown__x;
+$dropdown-mega-menu__link__color:            $body__color;
+$dropdown-mega-menu__link--hover__color:     $body__color;
+$dropdown-mega-menu__link--hover__bg:        shade($gray__01, 05%);
+$dropdown-mega-menu__link--active__color:    $body__color;
+$dropdown-mega-menu__link--active__bg:       shade($gray__01, 05%);
+$dropdown-mega-menu__link--disabled__color:  $gray__06;
+

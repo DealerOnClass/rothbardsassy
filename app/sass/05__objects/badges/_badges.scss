@@ -1,0 +1,43 @@
+.badge {
+    display: inline-block;
+
+    padding: $badge__padding;
+
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+
+    color: $badge__color;
+    border-radius: $badge__radius;
+    background-color: $badge__bg;
+    &:empty {
+        display: none;
+    }
+
+    .list-group-item.active > &,
+    .nav-pills > .active > a > & {
+        color: $badge--active__color;
+        background-color: $badge--active__bg;
+    }
+
+    .list-group-item > & {
+        float: right;
+    }
+    .list-group-item > & + & {
+        margin-right: rhythm(0.5);
+    }
+    .btn &,
+    .nav-pills > li > a > & {
+        margin-left: rhythm(0.5);
+    }
+}
+
+a.badge {
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        text-decoration: none;
+
+        color: $badge__link--hover__color;
+    }
+}

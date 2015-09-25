@@ -1,0 +1,34 @@
+//  Units
+$form__radius:                     $global__radius;
+$form__x:                          $global__x;
+$form__y:                          $global__y;
+//  Base
+$legend__color:                    $body__color;
+$legend__border__color:            $body__color;
+$label__font:                      $sans--bold;
+$form-control__color:              $body__color;
+$form-control__bg:                 $gray__01;
+$form-control__border:             $gray__02;
+$form-control__radius:             $form__radius;
+$form-control__shadow:             inset 0 $one__pixel $one__pixel rgba(0,0,0,0.075);
+$input__border__focus:             tint($state--info, 30%);
+$input__color__placeholder:        $gray__04;
+$input__bg--disabled:              $gray__02;
+$input__height--base:              $base__line-height * $base__font-unit;
+$input__height--small:             ($base__line-height / 2) * $base__font-unit;
+$input__height--large:             ($base__line-height * 2) * $base__font-unit;
+$form__vertical-padding:           $form__y;
+$form__horizontal-padding:         $form__x;
+$form--small__font-size:           $h6__font-size;
+$form--large__font-size:           $h4__font-size;
+$form-control--success:            $state--success;
+$form-control--warning:            $state--warning;
+$form-control--danger:             $state--danger;
+$form__help-block__color:          $gray__06;
+$input-group-addon__color:         $body__color;
+$input-group-addon__bg:            $gray__01;
+$input-group-addon__border:        $gray__02;
+$input-group-addon__radius:        $form__radius;
+$input-group-addon-sm__font-size:  $h6__font-size;
+$input-group-addon-lg__font-size:  $h4__font-size;
+

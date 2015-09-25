@@ -1,0 +1,52 @@
+.form-control {
+    display: block;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding: $form__vertical-padding $form__horizontal-padding;
+
+    transition: border-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
+
+    color: $form-control__color;
+    border: $one__pixel solid $form-control__border;
+    border-radius: $form-control__radius;
+    background-color: $form-control__bg;
+    background-image: none;
+    box-shadow: $form-control__shadow;
+
+    @include form-control-focus;
+    @include placeholder;
+
+    &[disabled],
+    &[readonly],
+    fieldset[disabled] & {
+        opacity: 1;
+        background-color: $input__bg--disabled;
+    }
+
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: $cursor-disabled;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    input[type='date'],
+    input[type='time'],
+    input[type='datetime-local'],
+    input[type='month'] {
+        &.form-control {
+            line-height: $input__height--base;
+        }
+
+        &.input-sm,
+        .input-group-sm & {
+            line-height: $input__height--small;
+        }
+
+        &.input-lg,
+        .input-group-lg & {
+            line-height: $input__height--large;
+        }
+    }
+}

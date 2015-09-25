@@ -1,0 +1,9 @@
+.modal-header {
+    padding: $modal-header__padding;
+
+    border-bottom: $one__pixel solid $modal-header__border;
+}
+
+.modal-header .close {
+    margin-top: $two__pixels * -1;
+}

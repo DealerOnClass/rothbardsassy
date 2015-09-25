@@ -1,0 +1,35 @@
+.btn-default {
+    @include button-variant($btn--default__bg);
+}
+
+.btn-primary {
+    @include button-variant($btn--primary__bg);
+}
+
+.btn-success {
+    @include button-variant($btn--success__bg);
+}
+
+.btn-info {
+    @include button-variant($btn--info__bg);
+}
+
+.btn-warning {
+    @include button-variant($btn--warning__bg);
+}
+
+.btn-danger {
+    @include button-variant($btn--danger__bg);
+}
+
+.btn-lg {
+    font-size: $btn--lg__font-size;
+}
+
+.btn-sm {
+    font-size: $btn--sm__font-size;
+}
+
+.btn-xs {
+    font-size: $btn--xs__font-size;
+}

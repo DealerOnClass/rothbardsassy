@@ -1,0 +1,63 @@
+@mixin card-variant ($background) {
+
+    $color:            check-color($background, 70, red, shade($background ,40%));
+
+    @if $card__contextual--desaturated {
+        background-color:  tint($background, 70%);
+        border-color:      check-color($background, 70, red, tint($background ,50%));
+        color:             $color;
+
+        .card-header,
+        .card-footer {
+            background-color:  tint($background, 70%);
+            border-color:      check-color($background, 70, red, tint($background ,60%));
+        }
+        //    .card-header,
+        //    .card-footer,
+        //    .card-title,
+        //    .card-blockquote {
+        //        color: #fff;
+        //    }
+        //    .card-link,
+        //    .card-text,
+        //    .card-blockquote > footer {
+        //        color: rgba(255,255,255,.7777775);
+        //    }
+        //    .card-link {
+        //        &:hover,
+        //        &:focus {
+        //            color: #fff;
+        //        }
+        //    }
+
+    } @else {
+        background-color:  $background;
+        //border-color:      $background;
+        border:            0 none;
+        color:             white;
+
+        .card-header,
+        .card-footer {
+            background-color:  shade($background, 15%);
+            border-color:      shade($background, 15%);
+            color:             white;
+        }
+        //    .card-header,
+        //    .card-footer,
+        //    .card-title,
+        //    .card-blockquote {
+        //        color: #fff;
+        //    }
+        .card-link,
+        .card-text,
+        .card-blockquote > footer {
+            color: rgba(255,255,255,.75);
+        }
+        //    .card-link {
+        //        &:hover,
+        //        &:focus {
+        //            color: #fff;
+        //        }
+        //    }
+    }
+}

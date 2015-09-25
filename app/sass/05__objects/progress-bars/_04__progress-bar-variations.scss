@@ -1,0 +1,16 @@
+.progress-bar-success {
+    @include progress-bar-variant($progress-bar--success__bg);
+}
+
+.progress-bar-info {
+    @include progress-bar-variant($progress-bar--info__bg);
+}
+
+.progress-bar-warning {
+    @include progress-bar-variant($progress-bar--warning__bg);
+}
+
+.progress-bar-danger {
+    @include progress-bar-variant($progress-bar--danger__bg);
+}
+

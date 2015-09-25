@@ -1,0 +1,63 @@
+@mixin panel-variant($color) {
+    $border:              shade($color, 10%);
+    $heading-text-color:  check-color($color, 70);
+    $heading-bg-color:    $color;
+    $heading-border:      check-color($color, 70, $border, $color);
+
+    border-color: $border;
+
+    & > .panel-heading {
+        color: $heading-text-color;
+        background-color: $heading-bg-color;
+        border-color: $heading-border;
+
+        + .panel-collapse > .panel-body {
+            border-top-color: $border;
+        }
+        .badge {
+            color: $heading-bg-color;
+            background-color: $heading-text-color;
+        }
+    }
+    & > .panel-footer {
+        + .panel-collapse > .panel-body {
+            border-bottom-color: $border;
+        }
+    }
+}
+
+
+@mixin panel-contextual-variant($color) {
+
+    @if $panel__contextual--desaturated {
+        $color:               tint($color, 70%);
+    } @else {
+        $color:               $color;
+    }
+
+    $border:              shade($color, 10%);
+    $heading-text-color:  check-color($color, 70);
+    $heading-bg-color:    $color;
+    $heading-border:      check-color($color, 70, $border, $color);
+
+    border-color: $border;
+
+    & > .panel-heading {
+        color: $heading-text-color;
+        background-color: $heading-bg-color;
+        border-color: $heading-border;
+
+        + .panel-collapse > .panel-body {
+            border-top-color: $border;
+        }
+        .badge {
+            color: $heading-bg-color;
+            background-color: $heading-text-color;
+        }
+    }
+    & > .panel-footer {
+        + .panel-collapse > .panel-body {
+            border-bottom-color: $border;
+        }
+    }
+}

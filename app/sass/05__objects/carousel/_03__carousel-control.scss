@@ -1,0 +1,83 @@
+.carousel-control {
+    font-size: $carousel-control__font-size;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: $carousel-control__width;
+
+    text-align: center;
+
+    color: $carousel-control__color;
+    text-shadow: $carousel-control__text-shadow;
+
+    @include opacity($carousel-control__opacity);
+
+    &.left {
+        @include gradient-horizontal($start-color: rgba(0,0,0,0.5), $end-color: rgba(0,0,0,0.0001));
+    }
+    &.right {
+        right: 0;
+        left: auto;
+
+        @include gradient-horizontal($start-color: rgba(0,0,0,0.0001), $end-color: rgba(0,0,0,0.5));
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+        color: $carousel-control__color;
+        outline: 0;
+
+        @include opacity($carousel-control--hover__opacity);
+    }
+
+    .fa-chevron-left,
+    .fa-chevron-right,
+    .glyphicon-chevron-left,
+    .glyphicon-chevron-right {
+        position: absolute;
+        z-index: 5;
+        top: 50%;
+
+        display: inline-block;
+
+        margin-top: -10px;
+    }
+    .fa-chevron-left,
+    .glyphicon-chevron-left {
+        left: 50%;
+
+        margin-left: -10px;
+    }
+    .fa-chevron-right,
+    .glyphicon-chevron-right {
+        right: 50%;
+
+        margin-right: -10px;
+    }
+    @media screen and (min-width: $screen-sm-min) {
+        .carousel-control {
+            .fa-chevron-left,
+            .fa-chevron-right,
+            .glyphicon-chevron-left,
+            .glyphicon-chevron-right {
+                width: 1em;
+                height: 1em;
+                margin-top: -0.5em;
+            }
+            .fa-chevron-left,
+            .glyphicon-chevron-left {
+                margin-left: -0.5em;
+            }
+            .fa-chevron-right,
+            .glyphicon-chevron-right {
+                margin-right: -0.5em;
+            }
+        }
+    }
+}
+

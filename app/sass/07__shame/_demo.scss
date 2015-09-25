@@ -1,0 +1,104 @@
+.demo {
+    position: relative;
+
+    margin-top: rhythm(2);
+    margin-bottom: rhythm(6);
+    padding-top: rhythm(2);
+
+    .navbar-section {
+        margin-bottom: rhythm(2);
+    }
+
+    section {
+        margin-bottom: rhythm(3);
+    }
+
+    .controls .form-control {
+        @include rhythm-rem(margin-bottom, 0.5);
+    }
+
+    .card {
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+
+h3 {
+    @include rhythm-rem(margin-top, 1);
+}
+
+
+.demo__grid {
+    .box {
+        margin-bottom: rhythm(0.5);
+        padding-top: rhythm(0.5);
+        padding-bottom: rhythm(0.5);
+
+        text-align: center;
+
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: $global__radius;
+    }
+}
+
+.show__dropdown {
+    display: block;
+}
+.show__dropdown + ul {
+    position: relative;
+
+    display: block;
+}
+
+.show__color {
+    padding-right: $grid__gutter / 2;
+    padding-left: $grid__gutter / 2;
+
+    .row + .row {
+        margin-top: rhythm(1);
+    }
+
+    [class*='col-'] {
+        padding-top: rhythm(0.5);
+        padding-bottom: rhythm(0.5);
+    }
+}
+
+.show__modal,
+.show__popover,
+.show__dropdown {
+    position: relative;
+
+    display: block;
+}
+
+.show__tooltip {
+    opacity: 1;
+}
+
+.show__btn-group {
+    .btn-group {
+        display: block;
+        margin-bottom: rhythm(1);
+
+        &:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    }
+}
+
+#sidebar {
+    .nav-pills > li > a {
+        margin-bottom: $two__pixels;
+    }
+}
+
+.show__btn {
+    .btn {
+        @include rhythm-rem(margin-bottom, 1);
+    }
+}

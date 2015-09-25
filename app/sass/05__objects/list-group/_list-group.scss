@@ -1,0 +1,109 @@
+//  List Group Base
+.list-group {
+    margin-bottom: $list-group__vertical-rhythm;
+    padding-left: 0;
+}
+
+//  List Group Item
+.list-group-item {
+    position: relative;
+
+    display: block;
+
+    padding: $list-group-item__padding;
+
+    border-width: $one__pixel $one__pixel 0;
+    border-style: solid;
+    border-color: $list-group-item__border;
+    background-color: $list-group__bg;
+    &:first-child {
+        @include border-top_radius($list-group-item__radius);
+    }
+    &:last-child {
+        margin-bottom: 0;
+
+        border-bottom-width: $one__pixel;
+
+        @include border-bottom_radius($list-group-item__radius);
+    }
+}
+
+a.list-group-item,
+button.list-group-item {
+    color: $list-group-item__link__color;
+
+    .list-group-item-heading {
+        color: $list-group-item__link__heading__color;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+        color: $list-group-item__link--hover__color;
+        background-color: $list-group-item__link--hover__bg;
+    }
+}
+
+button.list-group-item {
+    width: 100%;
+
+    text-align: left;
+}
+
+.list-group-item {
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+        cursor: $cursor-disabled;
+
+        color: $list-group-item--disabled__color;
+        background-color: $list-group-item--disabled__bg;
+
+        .list-group-item-heading {
+            color: inherit;
+        }
+        .list-group-item-text {
+            color: $list-group-item-text--disabled__color;
+        }
+    }
+
+    &.active,
+    &.active:hover,
+    &.active:focus {
+        z-index: 2;
+
+        color: $list-group-item--active__color;
+        border-color: $list-group-item--active__border;
+        background-color: $list-group-item--active__bg;
+
+        .list-group-item-heading,
+        .list-group-item-heading > small,
+        .list-group-item-heading > .small {
+            color: inherit;
+        }
+        .list-group-item-text {
+            color: $list-group-item-text--active__color;
+        }
+    }
+}
+
+//  List Group Variations
+@include list-group-variant(inverse, $list-group--inverse);
+@include list-group-variant(primary, $list-group--primary);
+
+@include list-group-item-variant(success, $state--success);
+@include list-group-item-variant(info, $state--info);
+@include list-group-item-variant(warning, $state--warning);
+@include list-group-item-variant(danger, $state--danger);
+
+//  List Group Item Heading
+.list-group-item-heading {
+    margin-top: 0;
+    margin-bottom: $five__pixels;
+}
+
+//  List Group Item Text
+.list-group-item-text {
+    margin-bottom: 0;
+}

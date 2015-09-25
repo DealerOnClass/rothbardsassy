@@ -1,0 +1,28 @@
+.thumbnail {
+    display: block;
+    overflow: hidden;
+
+    margin-bottom: $thumbnail__vertical-rhythm;
+    padding: $thumbnail__padding;
+
+    transition: border 0.2s ease-in-out;
+
+    border: $one__pixel solid $thumbnail__border;
+    border-radius: $thumbnail__radius;
+    background-color: $thumbnail__bg;
+
+    > img,
+    a > img {
+        margin-right: auto;
+        margin-left: auto;
+
+        @include img-responsive;
+    }
+
+    .caption {
+        padding: $thumbnail__caption__padding;
+
+        color: $thumbnail__caption__color;
+    }
+}
+

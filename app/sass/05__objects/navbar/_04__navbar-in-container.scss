@@ -1,0 +1,14 @@
+.container,
+.container-fluid {
+    > .navbar-header,
+    > .navbar-collapse {
+        margin-right: $navbar-collapse__padding * -1;
+        margin-left: $navbar-collapse__padding * -1;
+
+        @media (min-width:  $grid-float-breakpoint) {
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+}
+

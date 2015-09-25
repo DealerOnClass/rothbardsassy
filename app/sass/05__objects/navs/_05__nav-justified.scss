@@ -1,0 +1,31 @@
+.nav-justified {
+    width: 100%;
+
+    > li {
+        float: none;
+
+        > a {
+            margin-bottom: $nav-justified__link__vertical-rhythm;
+
+            text-align: center;
+        }
+    }
+
+    > .dropdown .dropdown-menu {
+        top: auto;
+        left: auto;
+    }
+
+    @media (min-width:$screen-sm-min) {
+        > li {
+            display: table-cell;
+
+            width: 1%;
+
+            > a {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+

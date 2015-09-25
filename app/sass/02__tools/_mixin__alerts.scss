@@ -1,0 +1,22 @@
+@mixin alert-variant ($background) {
+
+    $color: check-color($background, 70, red, shade($background ,40%));
+
+    @if $alert__contextual--desaturated {
+        color:             $color;
+        border-color:      check-color($background, 70, red, tint($background ,50%));
+        background-color:  tint($background, 70%);
+    } @else {
+        color:             white;
+        border-color:      $background;
+        background-color:  $background;
+    }
+
+    > a {
+        text-decoration: underline;
+
+        @include state {
+            color: darken($color, 20%);
+        }
+    }
+}

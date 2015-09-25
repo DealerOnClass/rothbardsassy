@@ -1,0 +1,8 @@
+.media-object {
+    display: block;
+
+    &.img-thumbnail {
+        max-width: none;
+    }
+}
+

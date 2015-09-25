@@ -1,0 +1,7 @@
+@mixin progress-bar-variant($background) {
+    background-color:  $background;
+
+    .progress-striped & {
+        @include gradient-striped;
+    }
+}

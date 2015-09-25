@@ -1,0 +1,23 @@
+.nav-pills {
+    > li {
+        float: left;
+
+        > a {
+            border-radius: $nav-pills__radius;
+        }
+
+        + li {
+            margin-left: $two__pixels;
+        }
+
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $nav-pills--active__color;
+                background-color: $nav-pills--active__bg;
+            }
+        }
+    }
+}
+

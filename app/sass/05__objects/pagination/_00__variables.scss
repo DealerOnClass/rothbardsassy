@@ -1,0 +1,26 @@
+//  Units
+$pagination__radius:            $global__radius;
+$pagination__x:                 $global__x;
+$pagination__y:                 $global__y;
+//  Options
+$pagination__rounded:           false !default;
+//  Base
+$pagination__bg:                $gray__01;
+$pagination__border:            $gray__02;
+$pagination__color:             $body__color;
+$pagination__padding:           $pagination__y $pagination__x;
+$pagination__radius:            $pagination__radius;
+$pagination--hover__color:      $body__color;
+$pagination--hover__bg:         shade($gray__01, 05%);
+$pagination--hover__border:     $gray__02;
+$pagination--active__color:     white;
+$pagination--active__bg:        $primary__color;
+$pagination--active__border:    $primary__color;
+$pagination--disabled__color:   $gray__03;
+$pagination--disabled__bg:      $gray__01;
+$pagination--disabled__border:  $gray__02;
+//  Variations
+$pagination--xs__font-size:     $h6__font-size / $base__font-ratio;
+$pagination--sm__font-size:     $h6__font-size;
+$pagination--lg__font-size:     $h4__font-size;
+

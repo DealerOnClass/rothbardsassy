@@ -1,0 +1,10 @@
+.card-header {
+    padding: $card-header__padding;
+
+    border-bottom: $one__pixel solid $card__border;
+    background-color: $card-header__bg;
+
+    &:first-child {
+        border-radius: $card-header__radius;
+    }
+}

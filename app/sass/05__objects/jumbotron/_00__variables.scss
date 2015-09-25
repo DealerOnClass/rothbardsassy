@@ -1,0 +1,14 @@
+//  Units
+$jumbotron__radius:           $global__radius;
+$jumbotron__x:                $global__x;
+$jumbotron__y:                $global__y;
+//  Base
+$jumbotron__bg:               $gray__01;
+$jumbotron__color:            $body__color;
+$jumbotron__padding:          ($jumbotron__y * 2) ($jumbotron__x * 2);
+$jumbotron__radius:           $jumbotron__radius;
+$jumbotron__font-size:        $lead__font-size;
+$jumbotron__vertical-rhythm:  ($jumbotron__y * 2);
+//  Jumbotron Heading
+$jumbotron__heading-color:    $body__color;
+

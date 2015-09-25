@@ -1,0 +1,11 @@
+//  Units
+$alert__radius:                   $global__radius;
+$alert__x:                        $global__x;
+$alert__y:                        $global__y;
+//  Options
+$alert__contextual--desaturated:  true !default;
+//  Base
+$alert__padding:                  $alert__y $alert__x;
+$alert__radius:                   $alert__radius;
+$alert__vertical-rhythm:          ($alert__y * 2);
+

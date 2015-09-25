@@ -1,0 +1,26 @@
+//  General Spacers                                 //  Original Values
+$global__radius:           rhythm(.2) !default;     //  rhythm(.2)
+$global__x:                rhythm(.5) !default;     //  rhythm(.5)
+$global__y:                rhythm(.25) !default;    //  rhythm(.5)
+$global__gutter:           30px;                    //  30px
+//  Pixel Units
+$one__pixel:               $base__font-unit / $master__font-size;
+$two__pixels:              $one__pixel * 2;
+$three__pixels:            $one__pixel * 3;
+$four__pixels:             $one__pixel * 4;
+$five__pixels:             $one__pixel * 5;
+$six__pixels:              $one__pixel * 6;
+$eight__pixels:            $one__pixel * 8;
+$nine__pixels:             $one__pixel * 9;
+$twelve__pixels:           $one__pixel * 12;
+//  Zindex
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+//  Cursor States
+$cursor-disabled:          not-allowed;
+

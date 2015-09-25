@@ -1,0 +1,7 @@
+a {
+    color:  $link__color;
+    @include state {
+        color: $link--hover__color;
+    }
+}
+

@@ -1,0 +1,28 @@
+.breadcrumb {
+    margin-bottom: $breadcrumb__vertical-rhythm;
+    padding: $breadcrumb__padding;
+
+    list-style: none;
+
+    border: $one__pixel solid $breadcrumb__border;
+    border-radius: $breadcrumb__radius;
+    background-color: $breadcrumb__bg;
+
+    > li {
+        display: inline-block;
+
+        + li:before {
+            $nbsp: '\00a0';
+
+            padding: $breadcrumb__separator__padding;
+
+            content: '#{$breadcrumb__separator}#{$nbsp}';
+
+            color: $breadcrumb__separator__color;
+        }
+    }
+
+    > .active {
+        color: $breadcrumb__link--active__color;
+    }
+}

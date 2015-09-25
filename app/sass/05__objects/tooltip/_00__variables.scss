@@ -1,0 +1,17 @@
+//  Units
+$tooltip__radius:           $global__radius;
+$tooltip__x:                $global__x;
+$tooltip__y:                $global__y;
+//  Base
+$tooltip__font-size:        $h6__font-size;
+$tooltip__opacity:          $gray__01;
+//  Tooltip-Inner
+$tooltip-inner__bg:         $primary__color;
+$tooltip-inner__color:      white;
+$tooltip-inner__max-width:  200px;
+$tooltip-inner__padding:    $global__y $global__x;
+$tooltip-inner__radius:     $global__radius;
+//  Tooltip Arrow
+$tooltip__arrow__color:     $primary__color;
+$tooltip__arrow__width:     rhythm(.25);
+

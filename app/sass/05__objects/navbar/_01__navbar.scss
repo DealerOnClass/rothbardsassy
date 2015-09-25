@@ -1,0 +1,11 @@
+.navbar {
+    position: relative;
+
+    border: $one__pixel solid transparent;
+
+    @include clearfix;
+    @media (min-width:  $grid-float-breakpoint) {
+        border-radius: $navbar__radius;
+    }
+}
+

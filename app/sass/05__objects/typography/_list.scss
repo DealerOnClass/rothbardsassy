@@ -1,0 +1,15 @@
+%list-unstyled {
+    padding-left: 0;
+
+    list-style: none;
+}
+
+.list-unstyled {
+    @extend %list-unstyled;
+}
+
+.list-inline > li {
+    display: inline-block;
+
+    @extend %list-unstyled;
+}

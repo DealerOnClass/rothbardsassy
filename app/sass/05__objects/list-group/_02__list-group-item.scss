@@ -1,0 +1,56 @@
+.list-group-item {
+    position: relative;
+
+    display: block;
+
+    padding: $list-group-item__padding;
+
+    border-width: $one__pixel $one__pixel 0;
+    border-style: solid;
+    border-color: $list-group-item__border;
+    background-color: $list-group__bg;
+    &:first-child {
+        border-radius: $list-group-item__radius $list-group-item__radius 0 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+
+        border-bottom-width: $one__pixel;
+        border-radius: 0 0 $list-group-item__radius $list-group-item__radius;
+    }
+    &.disabled,
+    &.disabled:hover,
+
+    &.disabled:focus {
+        cursor: $cursor-disabled;
+
+        color: $list-group-item--disabled__color;
+        background-color: $list-group-item--disabled__bg;
+
+        .list-group-item-heading {
+            color: inherit;
+        }
+        .list-group-item-text {
+            color: $list-group-item-text--disabled__color;
+        }
+    }
+
+    &.active,
+    &.active:hover,
+    &.active:focus {
+        z-index: 2;
+
+        color: $list-group-item--active__color;
+        border-color: $list-group-item--active__border;
+        background-color: $list-group-item--active__bg;
+
+        .list-group-item-heading,
+        .list-group-item-heading > small,
+        .list-group-item-heading > .small {
+            color: inherit;
+        }
+        .list-group-item-text {
+            color: $list-group-item-text--active__color;
+        }
+    }
+}

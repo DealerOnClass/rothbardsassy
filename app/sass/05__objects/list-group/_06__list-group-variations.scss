@@ -1,0 +1,7 @@
+@include list-group-variant(inverse, $list-group--inverse);
+@include list-group-variant(primary, $list-group--primary);
+@include list-group-item-variant(success, $state--success);
+@include list-group-item-variant(info, $state--info);
+@include list-group-item-variant(warning, $state--warning);
+@include list-group-item-variant(danger, $state--danger);
+

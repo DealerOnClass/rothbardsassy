@@ -1,0 +1,26 @@
+.input-group-addon {
+    font-weight: normal;
+
+    padding: $form__vertical-padding $form__horizontal-padding;
+
+    text-align: center;
+
+    color: $input-group-addon__color;
+    border: $one__pixel solid $input-group-addon__border;
+    border-radius: $input-group-addon__radius;
+    background-color: $input-group-addon__bg;
+
+    &.input-sm {
+        font-size: $input-group-addon-sm__font-size;
+    }
+
+    &.input-lg {
+        font-size: $input-group-addon-lg__font-size;
+    }
+
+    input[type='radio'],
+    input[type='checkbox'] {
+        margin-top: 0;
+    }
+}
+

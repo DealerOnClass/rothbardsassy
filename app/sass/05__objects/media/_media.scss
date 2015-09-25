@@ -1,0 +1,70 @@
+//  Media
+.media {
+    margin-top: $media__vertical-rhythm;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+//  Media Body
+.media,
+.media-body {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.media-body {
+    width: 10000px;
+    display: table-cell;
+
+    vertical-align: top;
+}
+
+//  Media Object
+.media-object {
+    display: block;
+
+    &.img-thumbnail {
+        max-width: none;
+    }
+}
+
+//  Media Alignment
+.media-right,
+.media > .pull-right {
+    padding-left: $media__gutter;
+}
+
+.media-left,
+.media > .pull-left {
+    padding-right: $media__gutter;
+}
+
+.media-left,
+.media-right {
+    display: table-cell;
+
+    vertical-align: top;
+}
+
+.media-middle {
+    vertical-align: middle;
+}
+
+.media-bottom {
+    vertical-align: bottom;
+}
+
+//  Media Heading
+.media-heading {
+    margin-top: 0;
+    margin-bottom: $five__pixels;
+}
+
+//  Media List
+.media-list {
+    padding-left: 0;
+
+    list-style: none;
+}

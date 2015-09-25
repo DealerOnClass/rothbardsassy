@@ -1,0 +1,12 @@
+html {
+    font-size: $base__font-size;
+}
+
+body {
+    font-family: $body__font;
+    line-height: $body__line-height;
+
+    min-width: 300px;
+
+    color: $body__color;
+}

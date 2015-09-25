@@ -1,0 +1,834 @@
+//
+//  Table of Contents
+//
+//
+//
+//  Colors
+//  Typography
+//  Global
+//
+//  Body
+//  Headings
+//  Links
+//  Lead
+//  Strong
+//  List
+//  Definition List
+//  Code
+//
+//  Grid                Jumbotron
+//  Tables              Thumbnails
+//  Forms               Alerts
+//  Custom Forms        Progress Bars
+//  Buttons             Media
+//  Button Groups       List Groups
+//  Dropdowns           Panels
+//  Navs                Wells
+//  Navbar              Modals
+//  Breadcrumb          Popovers
+//  Pagination          Carousel
+//  Pager               Tooltips
+//  Labels              Close
+//  Badges              Cards
+//
+//
+//  Globals
+//
+//
+//
+//  Colors
+//
+//  Neutral Palette
+$white:                  white;
+$black:                  black;
+$gray__01:               mix($black,$white,10%);
+$gray__02:               mix($black,$white,20%);
+$gray__03:               mix($black,$white,30%);
+$gray__04:               mix($black,$white,40%);
+$gray__05:               mix($black,$white,50%);
+$gray__06:               mix($black,$white,60%);
+$gray__07:               mix($black,$white,70%);
+$gray__08:               mix($black,$white,80%);
+$gray__09:               mix($black,$white,90%);
+//  State Palette
+$state--success:         #5cb85c !default;
+$state--info:            #5bc0de !default;
+$state--warning:         #f0ad4e !default;
+$state--danger:          #d9534f !default;
+//  True Palette
+$palette__blue:          #1c4181;
+$palette__blue--dark:    #15294b;
+$palette__orange:        #f36c0a;
+$palette__gray--dark:    #252931;
+$palette__gray:          #74777d;
+$palette__gray--light:   #f3f3f3;
+//  Abstract Palette
+$primary__color:         $palette__blue;
+$primary__color--dark:   $palette__blue--dark;
+$accent__color:          $palette__orange;
+$neutral__color--dark:   $palette__gray--dark;
+$neutral__color:         $palette__gray;
+$neutral__color--light:  $palette__gray--light;
+//
+//  Typography
+//
+//  Ratio
+$master__font-size:  18;
+$base__font-size:    ($master__font-size / 16) * 100%;
+$base__font-ratio:   1.333;
+$base__font-unit:    1em;
+$base__line-height:  1.5;
+//  Typeface
+$sans--regular:      'AvenirRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$sans--semibold:     'AvenirMedium', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$sans--bold:         'AvenirHeavy', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$mono--regular:      'SourceCodePro' !default;
+//
+//  Global
+//
+//  General Spacers
+$global__radius:           rhythm(.2) !default;
+$global__x:                rhythm(.5) !default;
+$global__y:                rhythm(.5) !default;
+$global__gutter:           15px;
+//  Media Queries
+$container-sm:             750px !default;
+$container-md:             970px !default;
+$container-lg:             1170px !default;
+$screen-xs-min:            480px !default;
+$screen-sm-min:            768px !default;
+$screen-md-min:            992px !default;
+$screen-lg-min:            1200px !default;
+$screen-xs-max:            ($screen-sm-min - 1) !default;
+$screen-sm-max:            ($screen-md-min - 1) !default;
+$screen-md-max:            ($screen-lg-min - 1) !default;
+//  Caret
+$caret__width-base:        $global__radius;
+$caret__width-large:       rhythm(.3);
+//  Pixel Units
+$one__pixel:               $base__font-unit / $master__font-size;
+$two__pixels:              $one__pixel * 2;
+$three__pixels:            $one__pixel * 3;
+$four__pixels:             $one__pixel * 4;
+$five__pixels:             $one__pixel * 5;
+$six__pixels:              $one__pixel * 6;
+$eight__pixels:            $one__pixel * 8;
+$nine__pixels:             $one__pixel * 9;
+$twelve__pixels:           $one__pixel * 12;
+//  Zindex
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+//  Cursor States
+$cursor-disabled:          not-allowed;
+//
+//  Body
+//
+//  Body Element
+$body__font:            $sans--regular;
+$body__line-height:     $base__line-height;
+$body__color:           $neutral__color--dark;
+//
+//  Headings
+//
+//  Heading Elements
+$h5__font-size:         $base__font-unit;
+$h6__font-size:         $h5__font-size / $base__font-ratio;
+$h4__font-size:         $h5__font-size * $base__font-ratio;
+$h3__font-size:         $h4__font-size * $base__font-ratio;
+$h2__font-size:         $h3__font-size * $base__font-ratio;
+$h1__font-size:         $h2__font-size * $base__font-ratio;
+//  //  Display Components
+//  $display-4__font-size:  $h1__font-size * $base__font-ratio;
+//  $display-3__font-size:  $display-4__font-size * $base__font-ratio;
+//  $display-2__font-size:  $display-3__font-size * $base__font-ratio;
+//  $display-1__font-size:  $display-2__font-size * $base__font-ratio;
+//  //  Heading Secondary Text
+//  $heading__font:         $sans--semibold;
+//  $heading__small__size:  $h6__font-size;
+//  $heading__small__color: $gray__03;
+//  //
+//  //  Links
+//  //
+//  $link__color:           $primary__color;
+//  $link--hover__color:    shade($link__color, 20%);
+//  //
+//  //  Lead Paragraph
+//  //
+//  $lead__font-size:       $h4__font-size;
+//  //
+//  //  Strong
+//  //
+//  $strong__font:          $sans--bold;
+//  //
+//  //  List
+//  //
+//  $list__is-inside:       true !default;
+//  $list__padding:         rhythm(1);
+//  //
+//  //  Definition List
+//  //
+//  $dl__horizontal__width:   rhythm(5);
+//  $dl__horizontal__gutter:  ($global__x * 2);
+//  //
+//  //  Code
+//  //
+//  $code__font:            $mono--regular;
+//  $mark__bg:              $accent__color;
+//  $mark__color:           $white;
+//
+//  Components
+//
+//
+//
+//  Grid
+//
+//  Options
+//  $grid__has__pull:            yes !default;
+//  $grid__has__push:            yes !default;
+//  $grid__has__offset:          yes !default;
+//  //  Properties
+//  $grid__gutter:               30px;
+//  $grid__columns:              12;
+//  //  Sizes and Media Query
+//  $screen-xs-min:              480px !default;
+//  $screen-sm-min:              768px !default;
+//  $screen-md-min:              992px !default;
+//  $screen-lg-min:              1200px !default;
+//  $screen-xs-max:              ($screen-sm-min - 1) !default;
+//  $screen-sm-max:              ($screen-md-min - 1) !default;
+//  $screen-md-max:              ($screen-lg-min - 1) !default;
+//  $container-sm:               750px !default;
+//  $container-md:               970px !default;
+//  $container-lg:               1170px !default;
+//  $grid-float-breakpoint:      $screen-sm-min !default;
+//  $grid-float-breakpoint-max:  ($grid-float-breakpoint - 1) default;
+//
+//  Tables
+//
+//  Options
+//  $table__has__striped:             true !default;
+//  $table__has__bordered:            true !default;
+//  $table__has__hover:               true !default;
+//  $table__has__condensed:           true !default;
+//  $table__has__contextual:          true !default;
+//  $table__is__responsive:           true !default;
+//  //  Base
+//  $table__border:                   $gray__02;
+//  $table__padding:                  $global__y $global__x;
+//  //  Table-Condensed
+//  $table--condensed__padding:       ($global__x / 2);
+//  //  Table-Striped
+//  $table--striped__bg:              $gray__01;
+//  //  Table-Hover
+//  $table--hover__bg:                tint($gray__01, 5%);
+//  //  Variations
+//  $table--contextual--desaturated:  yes !default;
+//  $table--contextual--active:       $primary__color;
+//  $table--contextual--success:      $state--success;
+//  $table--contextual--info:         $state--info;
+//  $table--contextual--warning:      $state--warning;
+//  $table--contextual--danger:       $state--danger;
+//
+//  Forms
+//
+$legend__color:                    $body__color;
+$legend__border__color:            $body__color;
+$label__font:                      $sans--bold;
+$form-control__color:              $body__color;
+$form-control__bg:                 $gray__01;
+$form-control__border:             $gray__02;
+$form-control__radius:             $global__radius;
+$form-control__shadow:             inset 0 $one__pixel $one__pixel rgba(0,0,0,0.075);
+$input__border__focus:             tint($state--info, 30%);
+$input__color__placeholder:        $gray__04;
+$input__bg--disabled:              $gray__02;
+$input__height--base:              $base__line-height * $base__font-unit;
+$input__height--small:             ($base__line-height / 2) * $base__font-unit;
+$input__height--large:             ($base__line-height * 2) * $base__font-unit;
+$form__vertical-padding:           $global__y;
+$form__horizontal-padding:         $global__x;
+$form--small__font-size:           $h6__font-size;
+$form--large__font-size:           $h4__font-size;
+$form-control--success:            $state--success;
+$form-control--warning:            $state--warning;
+$form-control--danger:             $state--danger;
+$form__help-block__color:          $gray__06;
+$input-group-addon__color:         $body__color;
+$input-group-addon__bg:            $gray__01;
+$input-group-addon__border:        $gray__02;
+$input-group-addon__radius:        $global__radius;
+$input-group-addon-sm__font-size:  $h6__font-size;
+$input-group-addon-lg__font-size:  $h4__font-size;
+//
+//  Custom Forms
+//
+$c-input__color:                $body__color;
+$c-input__horizontal-padding:   $global__x * 2;
+$c-checkbox-indicator__radius:  $global__radius;
+$-radio-indicator__radius:      50%;
+$c-select__padding:             $global__y $global__x;
+$c-select__border:              $gray__02;
+$c-select__radius:              $global__radius;
+$file-custom__input__padding:   $global__y $global__x;
+$file-custom__input__color:     $body__color;
+$file-custom__input__bg:        white;
+$file-custom__input__border:    $gray__02;
+$file-custom__input__radius:    $global__radius;
+$file-custom__button__padding:  $global__y $global__x;
+$file-custom__button__color:    $body__color;
+$file-custom__button__bg:       $gray__01;
+$file-custom__button__border:   $gray__02;
+$file-custom__button__radius:   0 $global__radius $global__radius 0;
+//
+//  Buttons
+//
+//  Options
+//  $btn__has__border:            yes !default;
+//  //  Base
+//  $btn__padding:                $global__y $global__x;
+//  $btn__radius:                 $global__radius;
+//  $btn--hover__color:           $primary__color;
+//  $btn--active__shadow:         inset 0 $three__pixels $five__pixels rgba(0, 0, 0, 0.125);
+//  $btn--disabled__shadow:       none;
+//  //  Btn-Link
+//  $btn-link__color:             $gray__07;
+//  $btn-link--hover__color:      $gray__07;
+//  $btn-link--disabled__color:   $gray__07;
+//  //  Btn-Block
+//  $btn-block__vertical-rhythm:  $global__y;
+//  //  Variations
+//  $btn--xs__font-size:          $h6__font-size / $base__font-ratio;
+//  $btn--sm__font-size:          $h6__font-size;
+//  $btn--lg__font-size:          $h4__font-size;
+//  $btn--default__bg:            $gray__01;
+//  $btn--primary__bg:            $primary__color;
+//  $btn--success__bg:            $state--success;
+//  $btn--info__bg:               $state--info;
+//  $btn--warning__bg:            $state--warning;
+//  $btn--danger__bg:             $state--danger;
+//
+//  Button Groups
+//
+//  Base
+//  $btn-group__dropdown-toggle__padding:         ($global__x / 2);
+//  $btn-group__dropdown-toggle--active__shadow:  inset 0 $three__pixels $five__pixels rgba(0, 0, 0, 0.125);
+//
+//  Dropdowns
+//
+//  Options
+//  $dropdown__caret-use-icon:              false !default;
+//  //  Base
+//  $caret__width-base:                     $global__radius;
+//  $caret__width-large:                    rhythm(.3);
+//  //  Dropdown-Menu
+//  $dropdown-menu__bg:                     $gray__01;
+//  $dropdown-menu__border:                 $gray__02;
+//  $dropdown-menu__radius:                 $global__radius;
+//  $dropdown-menu__divider__bg:            $gray__02;
+//  $dropdown-menu__link__padding:          $global__y $global__x;
+//  $dropdown-menu__link__color:            $body__color;
+//  $dropdown-menu__link--hover__color:     $body__color;
+//  $dropdown-menu__link--hover__bg:        shade($gray__01, 05%);
+//  $dropdown-menu__link--active__color:    $gray__06;
+//  $dropdown-menu__link--active__bg:       $gray__06;
+//  $dropdown-menu__link--disabled__color:  $gray__06;
+//  //  Dropdown-Header
+//  $dropdown-header__font-size:            $h6__font-size;
+//  $dropdown-header__color:                $body__color;
+//  $dropdown-header__vertical-padding:     .5;      // Using Rem
+//  $dropdown-header__horizontal-padding:   .5;      // Using Rem
+//  //
+//  //  Dropdowns Mega Menu
+//  //
+//  //  Base
+//  $dropdown-mega-menu__bg:                     $gray__01;
+//  $dropdown-mega-menu__border:                 $gray__02;
+//  $dropdown-mega-menu__radius:                 $global__radius;
+//  //  Dropdown-Mega-Menu Link
+//  $dropdown-mega-menu__link__padding:          $global__y $global__x;
+//  $dropdown-mega-menu__link__color:            $body__color;
+//  $dropdown-mega-menu__link--hover__color:     $body__color;
+//  $dropdown-mega-menu__link--hover__bg:        shade($gray__01, 05%);
+//  $dropdown-mega-menu__link--active__color:    $body__color;
+//  $dropdown-mega-menu__link--active__bg:       shade($gray__01, 05%);
+//  $dropdown-mega-menu__link--disabled__color:  $gray__06;
+//
+//  Navs
+//
+//  Base
+//  $nav__link__padding:                    $global__y $global__x;
+//  $nav__link--hover__bg:                  shade($gray__01, 05%);
+//  $nav__link--hover__border:              $gray__02;
+//  $nav__link--disabled__color:            $gray__02;
+//  $nav__link--disabled--hover__color:     $gray__02;
+//  //  Nav-Tabs
+//  $nav-tabs__radius:                      $global__radius;
+//  $nav-tabs__border:                      $gray__02;
+//  $nav-tabs--hover__border:               $gray__02;
+//  $nav-tabs--active__color:               white;
+//  $nav-tabs--active__bg:                  $primary__color;
+//  $nav-tabs--active__border:              $primary__color;
+//  //  Nav-Pills
+//  $nav-pills__radius:                     $nav-tabs__radius;
+//  $nav-pills--active__color:              white;
+//  $nav-pills--active__bg:                 $primary__color;
+//  $nav-pills--primary:                    saturate($primary__color, 20%);
+//  //  Nav-Justified
+//  $nav-justified__link__vertical-rhythm:  $global__y;
+//  //  Nav-Tabs-Justified
+//  $nav-tabs-justified__radius:            $nav-tabs__radius;
+//  $nav-tabs-justified__border:            $nav-tabs__border;
+//  $nav-tabs-justified--active__border:    $nav-tabs__border;
+//
+//  Navbar
+//
+//  Base
+//  $navbar__radius:                       $global__radius;
+//  //  Navbar-Collapse
+//  $navbar-collapse__padding:             $global__gutter / 2;
+//  $navbar-collapse__max-height:          340px;
+//  //  Navbar-Brand
+//  $navbar-brand__padding:                $global__y $global__x;
+//  $navbar-brand__margin-left:            ($global__x * -1);
+//  //  Navbar-Toggle
+//  $navbar-toggle__radius:                0;
+//  $navbar-toggle__border:                $gray__01;
+//  $navbar-toggle__icon-bar__bg:          $body__color;
+//  $navbar-toggle__icon-bar__width:       rhythm(.75);
+//  $navbar-toggle__padding:               $global__y $global__x;
+//  //  Navbar-Nav Link
+//  $navbar-nav__link__vertical__padding:  $global__y;
+//  //  Navbar-Form
+//  $navbar-form__vertical-padding:        $global__y;
+//  $navbar-form__horizontal-padding:      $global__x;
+//  $navbar-text__vertical-padding:        $global__y;
+//  $navbar-text__horizontal-margin:       $global__x;
+//  //  Variations
+//  $navbar-right__padding:                $global__x;
+//
+//  Navbar-default
+//
+//  Base
+//  $navbar-default__bg:                     $gray__01;
+//  $navbar-default__border:                 $gray__02;
+//  $navbar-default__color:                  $body__color;
+//  //  Navbar-Brand
+//  $navbar-default-brand__color:            $body__color;
+//  $navbar-default-brand--hover__bg:        shade($gray__01, 05%);
+//  $navbar-default-brand--hover__color:     $body__color;
+//  //  Navbar-Toggle
+//  $navbar-default-toggle__border:          $gray__02;
+//  $navbar-default-toggle--hover__bg:       $gray__02;
+//  $navbar-default-toggle-icon-bar__bg:     $body__color;
+//  //  Navbar Link
+//  $navbar-default__link__color:            $body__color;
+//  $navbar-default__link--hover__bg:        $gray__02;
+//  $navbar-default__link--hover__color:     $body__color;
+//  $navbar-default__link--active__bg:       $gray__02;
+//  $navbar-default__link--active__color:    $body__color;
+//  $navbar-default__link--disabled__bg:     $gray__02;
+//  $navbar-default__link--disabled__color:  $gray__02;
+//  //
+//  //  Navbar-inverse
+//  //
+//  //  Base
+//  $navbar-inverse__bg:                     invert($gray__01);
+//  $navbar-inverse__border:                 invert($gray__02);
+//  $navbar-inverse__color:                  invert($body__color);
+//  //  Navbar-Brand
+//  $navbar-inverse-brand__color:            invert($body__color);
+//  $navbar-inverse-brand--hover__bg:        invert(shade($gray__01, 05%));
+//  $navbar-inverse-brand--hover__color:     invert($body__color);
+//  //  Navbar-Toggle
+//  $navbar-inverse-toggle__border:          invert($gray__02);
+//  $navbar-inverse-toggle--hover__bg:       invert($gray__02);
+//  $navbar-inverse-toggle-icon-bar__bg:     invert($body__color);
+//  //  Navbar Link
+//  $navbar-inverse__link__color:            invert($body__color);
+//  $navbar-inverse__link--hover__bg:        invert($gray__02);
+//  $navbar-inverse__link--hover__color:     invert($body__color);
+//  $navbar-inverse__link--active__bg:       invert($gray__02);
+//  $navbar-inverse__link--active__color:    invert($body__color);
+//  $navbar-inverse__link--disabled__bg:     invert($gray__02);
+//  $navbar-inverse__link--disabled__color:  invert($gray__02);
+//  //
+//  //  Navbar-dealeron
+//  //
+//  //  Base
+//  $navbar-dealeron__bg:                     saturate($primary__color, 20%);
+//  $navbar-dealeron__border:                 saturate($primary__color, 20%);
+//  $navbar-dealeron__color:                  white;
+//  //  Navbar-Brand
+//  $navbar-dealeron-brand__color:            white;
+//  $navbar-dealeron-brand--hover__bg:        shade($navbar-dealeron__bg, 10%);
+//  $navbar-dealeron-brand--hover__color:     white;
+//  //  Navbar-Toggle
+//  $navbar-dealeron-toggle__border:          shade($navbar-dealeron__bg, 10%);
+//  $navbar-dealeron-toggle--hover__bg:       shade($navbar-dealeron__bg, 10%);
+//  $navbar-dealeron-toggle-icon-bar__bg:     white;
+//  //  Navbar Link
+//  $navbar-dealeron__link__color:            white;
+//  $navbar-dealeron__link--hover__bg:        shade($navbar-dealeron__bg, 10%);
+//  $navbar-dealeron__link--hover__color:     white;
+//  $navbar-dealeron__link--active__bg:       shade($navbar-dealeron__bg, 20%);
+//  $navbar-dealeron__link--active__color:    white;
+//  $navbar-dealeron__link--disabled__bg:     shade($navbar-dealeron__bg, 2.5%);
+//  $navbar-dealeron__link--disabled__color:  white;
+//
+//  Breadcrumb
+//
+//  Base
+//  $breadcrumb__bg:                   $gray__01;
+//  $breadcrumb__border:               $gray__02;
+//  $breadcrumb__padding:              $global__y $global__x;
+//  $breadcrumb__radius:               $global__radius;
+//  $breadcrumb__vertical-rhythm:      ($global__y * 2);
+//  //  Breadcrumb Separator
+//  $breadcrumb__separator__padding:   0 ($global__x / 2);
+//  $breadcrumb__separator:            "/";
+//  $breadcrumb__separator__color:     $body__color;
+//  //  Breadcrumb Link
+//  $breadcrumb__link--active__color:  $body__color;
+//
+//  Pagination
+//
+//  Base
+//  $pagination__bg:                $gray__01;
+//  $pagination__border:            $gray__02;
+//  $pagination__color:             $body__color;
+//  $pagination__padding:           $global__y $global__x;
+//  $pagination__radius:            $global__radius;
+//  $pagination--hover__color:      $body__color;
+//  $pagination--hover__bg:         shade($gray__01, 05%);
+//  $pagination--hover__border:     $gray__02;
+//  $pagination--active__color:     white;
+//  $pagination--active__bg:        $primary__color;
+//  $pagination--active__border:    $primary__color;
+//  $pagination--disabled__color:   $gray__03;
+//  $pagination--disabled__bg:      $gray__01;
+//  $pagination--disabled__border:  $gray__02;
+//  //  Variations
+//  $pagination--xs__font-size:     $h6__font-size / $base__font-ratio;
+//  $pagination--sm__font-size:     $h6__font-size;
+//  $pagination--lg__font-size:     $h4__font-size;
+//
+//  Pager
+//
+//  Pager Link
+//  $pager__link__vertical-padding:    $global__y;
+//  $pager__link__horizontal-padding:  $global__x * 2;
+//  $pager__link__bg:                  $gray__01;
+//  $pager__link__border:              $gray__02;
+//  $pager__link__radius:              $pager__link__vertical-padding * 2;
+//  $pager__link--hover__bg:           shade($gray__01, 05%);
+//  $pager__link--disabled__color:     $gray__04;
+//
+//  Labels
+//
+//  Base
+//  $label__color:               $body__color;
+//  $label__padding:             ($global__y / 2) $global__x;
+//  $label__radius:              $global__radius;
+//  $label__font-size:           $h6__font-size;
+//  //  Label Link
+//  $label__link--hover__color:  $gray__02;
+//  //  Variations
+//  $label--default__bg:         $primary__color;
+//  $label--primary__bg:         $accent__color;
+//  $label--success__bg:         $state--success;
+//  $label--info__bg:            $state--info;
+//  $label--warning__bg:         $state--warning;
+//  $label--danger__bg:          $state--danger;
+//
+//  Badges
+//
+//  Base
+//  $badge__bg:                  $gray__02;
+//  $badge__color:               $body__color;
+//  $badge__padding:             0 $global__x;
+//  $badge__radius:              ($global__x * 2);
+//  $badge--active__bg:          shade($primary__color, 30%);
+//  $badge--active__color:       white;
+//  $badge__link--hover__color:  $gray__02;
+//
+//  Jumbotron
+//
+//  Base
+//  $jumbotron__bg:               $gray__01;
+//  $jumbotron__color:            $body__color;
+//  $jumbotron__padding:          ($global__y * 2) ($global__x * 2);
+//  $jumbotron__radius:           $global__radius;
+//  $jumbotron__font-size:        $lead__font-size;
+//  $jumbotron__vertical-rhythm:  ($global__y * 2);
+//  //  Jumbotron Heading
+//  $jumbotron__heading-color:    $body__color;
+//
+//  Thumbnails
+//
+//  Base
+//  $thumbnail__bg:                   $gray__01;
+//  $thumbnail__border:               $gray__01;
+//  $thumbnail__padding:              0;
+//  $thumbnail__radius:               $global__radius;
+//  $thumbnail__vertical-rhythm:      ($global__y * 2);
+//  //  Thumbnail Caption
+//  $thumbnail__caption__padding:     0 $global__x;
+//  $thumbnail__caption__color:       $body__color;
+//  //  Thumbnail Link
+//  $thumbnail__link__padding:        ($global__y / 2) ($global__x / 2);
+//  $thumbnail__link__border:         $gray__01;
+//  $thumbnail__link__radius:         $global__radius;
+//  $thumbnail__link__bg:             $gray__01;
+//  $thumbnail__link--hover__border:  $primary__color;
+//  $thumbnail__link--hover__bg:      $primary__color;
+//  $thumbnail__link--hover__border:  $primary__color;
+//
+//  Alerts
+//
+//  Options
+//  $alert__contextual--desaturated:  true !default;
+//  //  Base
+//  $alert__padding:                  $global__y $global__x;
+//  $alert__radius:                   $global__radius;
+//  $alert__vertical-rhythm:          ($global__y * 2);
+//
+//  Progress Bars
+//
+//  Base
+//  $progress__height:           ($global__y * 2);
+//  $progress__radius:           $global__radius;
+//  $progress__vertical-rhythm:  ($global__y * 2);
+//  //  Progress Bar
+//  $progress-bar__color:        white;
+//  $progress-bar__fg:           $primary__color;
+//  $progress-bar__bg:           $gray__01;
+//  $progress-bar--success__bg:  $state--success;
+//  $progress-bar--info__bg:     $state--info;
+//  $progress-bar--warning__bg:  $state--warning;
+//  $progress-bar--danger__bg:   $state--danger;
+//
+//  Media
+//
+//  Base
+//  $media__gutter:           ($global__y * 2);
+//  $media__vertical-rhythm:  ($global__y * 2);
+//
+//  List Groups
+//
+//  Options
+//  $list-group__contextual--desaturated:    true !default;
+//  //  Base
+//  $list-group__bg:                         $gray__01;
+//  $list-group__vertical-rhythm:            ($global__y * 2);
+//  //  List Group Item
+//  $list-group-item__padding:               $global__y $global__x;
+//  $list-group-item__border:                $gray__02;
+//  $list-group-item__radius:                $global__radius;
+//  $list-group-item__link__color:           $primary__color;
+//  $list-group-item__link__heading__color:  $primary__color;
+//  $list-group-item__link--hover__color:    $primary__color;
+//  $list-group-item__link--hover__bg:       shade($list-group__bg, 05%);
+//  $list-group-item--disabled__bg:          $gray__01;
+//  $list-group-item--disabled__color:       $gray__04;
+//  $list-group-item--active__color:         white;
+//  $list-group-item--active__bg:            $primary__color;
+//  $list-group-item--active__border:        $primary__color;
+//  $list-group-item-text--disabled__color:  $gray__04;
+//  $list-group-item-text--active__color:    $gray__02;
+//  //  Variations
+//  $list-group--inverse:                    $neutral__color--dark;
+//  $list-group--primary:                    $primary__color;
+//
+//  Panels
+//
+//  Options
+//  $panel__contextual--desaturated:  true !default;
+//  //  Base
+//  $panel__bg:                       white;
+//  $panel__radius:                   $global__radius;
+//  $panel__shadow:                   0 $one__pixel $one__pixel rgba(0,0,0,0.05);
+//  $panel__vertical-rhythm:          ($global__y * 2);
+//  //  Panel Heading
+//  $panel-heading__border:           $gray__02;
+//  $panel-heading__padding:          $global__y $global__x;
+//  //  Panel Body
+//  $panel-body__padding:             $global__y $global__x;
+//  //  Panel Footer
+//  $panel-footer__bg:                $gray__01;
+//  $panel-footer__border:            $gray__02;
+//  $panel-footer__padding:           $global__y $global__x;
+//  //  Panel Caption
+//  $panel__caption__padding:         $global__y $global__x;
+//  //  Panel-Group
+//  $panel-group__vertical-rhythm:    ($global__y * 2);
+//  //  Panel Table
+//  $panel__table__border:            $gray__02;
+//  //  Variations
+//  $panel--default:                  $gray__01;
+//  $panel--primary:                  $primary__color;
+//  $panel--success:                  $state--success;
+//  $panel--info:                     $state--info;
+//  $panel--warning:                  $state--warning;
+//  $panel--danger:                   $state--danger;
+//
+//  Wells
+//
+//  Base
+//  $well__bg:               $gray__01;
+//  $well__border:           $gray__02;
+//  $well__padding:          $global__x;
+//  $well__radius:           $global__radius;
+//  $well__vertical-rhythm:  ($global__y * 2);
+//  //  Variations
+//  $well--lg__padding:      $well__padding * $base__line-height;
+//  $well--lg__radius:       $well__radius * $base__line-height;
+//  $well--sm__padding:      $well__padding / $base__line-height;
+//  $well--sm__radius:       $well__radius / $base__line-height;
+//  $well--xs__padding:      $well--sm__padding / $base__line-height;
+//  $well--xs__radius:       $well__sm__radius / $base__line-height;
+//
+//  Modals
+//
+//  Modal-Content
+//  $modal-content__bg:        white;
+//  $modal-content__border:    $gray__02;
+//  $modal-content__radius:    $global__radius;
+//  $modal-content__shadow:    0 $three__pixels $nine__pixels rgba(0,0,0,0.5);
+//  //  Modal-Backdrop
+//  $modal-backdrop__bg:       $gray__01;
+//  $modal-backdrop__opacity:  .5;
+//  //  Modal-Header
+//  $modal-header__padding:    $global__y $global__x;
+//  $modal-header__border:     $gray__02;
+//  //  Modal-Body
+//  $modal-body__padding:      $global__y $global__x;
+//  //  Modal-Footer
+//  $modal-footer__padding:    $global__y $global__x;
+//  $modal-footer__border:     $gray__02;
+//  //  Variations
+//  $modal--lg:                900px !default;
+//  $modal--md:                600px !default;
+//  $modal--sm:                300px !default;
+//
+//  Popovers
+//
+//  Base
+//  $popover__bg:                   white;
+//  $popover__border:               $gray__02;
+//  $popover__max-width:            276px;
+//  $popover__padding:              0 $global__x;
+//  $popover__radius:               $global__radius;
+//  //  Popover-Title
+//  $popover-title__bg:             white;
+//  $popover-title__padding:        $global__y $global__x;
+//  $popover-title__border:         $gray__02;
+//  //  Popover-Content
+//  $popover-content__padding:      $global__y 0;
+//  //  Popover Arrow
+//  $popover__arrow__color:         white;
+//  $popover__arrow__width:         10px;
+//  $popover__arrow__outer__color:  $gray__02;
+//  $popover__arrow__outer__width:  $popover__arrow__width + 1;
+//
+//  Carousel
+//
+//  Carousel-Caption
+//  $carousel-caption__color:                     white;
+//  $carousel-caption__text-shadow:               0 $one__pixel $two__pixels rgba(0,0,0,.6) !default;
+//  //  Carousel-Control
+//  $carousel-control__color:                     $gray__02;
+//  $carousel-control__font-size:                 1em;
+//  $carousel-control__opacity:                   .7;
+//  $carousel-control--hover__opacity:            1;
+//  $carousel-control__text-shadow:               0 $one__pixel $two__pixels rgba(0,0,0,.6) !default;
+//  $carousel-control__width:                     15%;
+//  //  Carousel-Indicator
+//  $carousel-indicator--active__bg:              $gray__02;
+//  $carousel-indicator__color:                   $gray__02;
+//  //  Carousel-Rounded
+//  $carousel-rounded__radius:                    $global__radius;
+//  //  Carousel-Control-Flat
+//  $carousel-control-flat__control__bg:          rgba(0,0,0,0.4);
+//  $carousel-control-flat__control--hover__bg:   rgba(0,0,0,0.6);
+//  //  Carousel-Control-Position
+//  $carousel-control-position__control__height:  3em;
+//  $carousel-control-position__control__width:   6em;
+//  $carousel-control-position__vert:             middle !default;
+//  $carousel-control-position__horz:             middle !default;
+//
+//  Tooltips
+//
+//  Base
+//  $tooltip__font-size:        $h6__font-size;
+//  $tooltip__opacity:          $gray__01;
+//  //  Tooltip-Inner
+//  $tooltip-inner__bg:         $primary__color;
+//  $tooltip-inner__color:      white;
+//  $tooltip-inner__max-width:  200px;
+//  $tooltip-inner__padding:    $global__y $global__x;
+//  $tooltip-inner__radius:     $global__radius;
+//  //  Tooltip Arrow
+//  $tooltip__arrow__color:     $primary__color;
+//  $tooltip__arrow__width:     rhythm(.25);
+//
+//  Close
+//
+//  Base
+//  $close__font:     $sans--bold;
+//  $close__padding:  0 ($global__x / 2) ($global__y / 2);
+//
+//  Cards
+//
+//  Options
+//  $card__contextual--desaturated:   false;
+//  //  Base
+//  $card__border:                    $gray__02;
+//  $card__radius:                    $global__radius;
+//  $card__vertical-rhythm:           ($global__y * 2);
+//  //  Card-Block
+//  $card-block__padding:             ($global__y * 2);
+//  //  Card-Title
+//  $card-title__vertical-rhythm:     $global__y;
+//  //  Card-Subtitle
+//  $card-subtitle__vertical-rhythm:  $global__y;
+//  //  Card-Link
+//  $card-link__horizontal-rhythm:    $global__x;
+//  //  Card-Header
+//  $card-header__padding:            $global__y ($global__x * 2);
+//  $card-header__bg:                 $gray__01;
+//  $card-header__radius:             $global__radius $global__radius 0 0;
+//  //  Card-Footer
+//  $card-footer__padding:            $global__y ($global__x * 2);
+//  $card-footer__bg:                 $gray__01;
+//  $card-footer__radius:             0 0 $global__radius $global__radius;
+//  //  Card-Img
+//  $card-img-overlay__bg:            rgba(0, 0, 0, 0.5);
+//  $card-img-overlay__padding:       ($global__y * 2) ($global__x * 2);
+//  //  Card-Deck
+//  $card-deck__gutter:               ($global__x * 2);
+//  //  Card List-Group-Item
+//  $card__list-group-item__padding:  ($global__y * 2);
+//  //  Variations
+//  $card--inverse__bg:               $neutral__color--dark;
+//  $card--primary__bg:               $primary__color;
+//  $card--success__bg:               $state--success;
+//  $card--info__bg:                  $state--info;
+//  $card--warning__bg:               $state--warning;
+//  $card--danger__bg:                $state--danger;
+//
+//
+//
+//
+//  Logo
+$logo__font:           $sans--bold;
+$logo__accent__color:  $white;
+//  Navbar
+$navbar-section__bg:                crimson;
+$navbar-section__color:             $white;
+$navbar-section__navbar-brand__bg:  shade($navbar-section__bg, 15%);
+

@@ -1,0 +1,23 @@
+.modal-footer {
+    padding: $modal-footer__padding;
+
+    text-align: right;
+
+    border-top: $one__pixel solid $modal-footer__border;
+
+    @include clearfix;
+
+    .btn + .btn {
+        margin-bottom: 0;
+        margin-left: $five__pixels;
+    }
+
+    .btn-group .btn + .btn {
+        margin-left: $one__pixel * -1;
+    }
+
+    .btn-block + .btn-block {
+        margin-left: 0;
+    }
+}
+

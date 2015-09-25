@@ -1,0 +1,12 @@
+.alert-success {
+    @include alert-variant($state--success);
+}
+.alert-info {
+    @include alert-variant($state--info);
+}
+.alert-warning {
+    @include alert-variant($state--warning);
+}
+.alert-danger {
+    @include alert-variant($state--danger);
+}

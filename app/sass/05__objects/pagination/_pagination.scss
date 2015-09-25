@@ -1,0 +1,92 @@
+.pagination {
+    display: inline-block;
+
+    padding-left: 0;
+
+    border-radius: $pagination__radius;
+
+    > li {
+        display: inline;
+        > a,
+        > span {
+            position: relative;
+
+            float: left;
+
+            margin-left: $one__pixel * -1;
+            padding: $pagination__padding;
+
+            color: $pagination__color;
+            border: $one__pixel solid $pagination__border;
+            background-color: $pagination__bg;
+        }
+        &:first-child {
+            > a,
+            > span {
+                margin-left: 0;
+
+                @include border-left-radius($pagination__radius);
+            }
+        }
+        &:last-child {
+            > a,
+            > span {
+                @include border-right-radius($pagination__radius);
+            }
+        }
+    }
+
+    > li > a,
+    > li > span {
+        &:hover,
+        &:focus {
+            z-index: 3;
+
+            color: $pagination--hover__color;
+            border-color: $pagination--hover__border;
+            background-color: $pagination--hover__bg;
+        }
+    }
+
+    > .active > a,
+    > .active > span {
+        &,
+        &:hover,
+        &:focus {
+            z-index: 20;
+
+            cursor: default;
+
+            color: $pagination--active__color;
+            border-color: $pagination--active__border;
+            background-color: $pagination--active__bg;
+        }
+    }
+
+    > .disabled {
+        > span,
+        > span:hover,
+        > span:focus,
+        > a,
+        > a:hover,
+        > a:focus {
+            cursor: $cursor-disabled;
+
+            color: $pagination--disabled__color;
+            border-color: $pagination--disabled__border;
+            background-color: $pagination--disabled__bg;
+        }
+    }
+}
+
+.pagination-lg {
+    font-size: $pagination--lg__font-size;
+}
+
+.pagination-sm {
+    font-size: $pagination--sm__font-size;
+}
+
+.pagination-xs {
+    font-size: $pagination--xs__font-size;
+}

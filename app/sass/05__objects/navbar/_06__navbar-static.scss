@@ -1,0 +1,10 @@
+.navbar-static-top {
+    z-index: $zindex-navbar;
+
+    border-width: 0 0 $one__pixel;
+
+    @media (min-width:  $grid-float-breakpoint) {
+        border-radius: 0;
+    }
+}
+

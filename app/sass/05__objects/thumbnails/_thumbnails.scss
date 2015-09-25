@@ -1,0 +1,48 @@
+//  Thumbnail Base
+.thumbnail {
+    display: block;
+    overflow: hidden;
+
+    margin-bottom: $thumbnail__vertical-rhythm;
+    padding: $thumbnail__padding;
+
+    transition: border 0.2s ease-in-out;
+
+    border: $one__pixel solid $thumbnail__border;
+    border-radius: $thumbnail__radius;
+    background-color: $thumbnail__bg;
+
+    > img,
+    a > img {
+        margin-right: auto;
+        margin-left: auto;
+
+        @include img-responsive;
+    }
+
+    .caption {
+        padding: $thumbnail__caption__padding;
+
+        color: $thumbnail__caption__color;
+    }
+}
+
+//  Thumbnail Link
+a.thumbnail {
+    padding: $thumbnail__link__padding;
+
+    border-color: $thumbnail__link__border;
+    border-radius: $thumbnail__link__radius;
+    background-color: $thumbnail__link__bg;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+    border-color: $thumbnail__link--hover__border;
+    background-color: $thumbnail__link--hover__bg;
+}
+
+.thumbnail-flush {
+    border: 0 none;
+}

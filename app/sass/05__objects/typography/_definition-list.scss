@@ -1,0 +1,17 @@
+.dl-horizontal {
+    dd {
+        @include clearfix;
+    }
+
+    dt {
+        float: left;
+
+        width: $dl__horizontal__width;
+
+        @include text-overflow-ellipsis;
+    }
+
+    dd {
+        margin-left: $dl__horizontal__width + $dl__horizontal__gutter;
+    }
+}

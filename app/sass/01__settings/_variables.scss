@@ -1,0 +1,10 @@
+//  Caret
+$caret__width-base:        $global__radius;
+$caret__width-large:       rhythm(.3);
+//  Logo
+$logo__font:           $sans--bold;
+$logo__accent__color:  $white;
+//  Navbar
+$navbar-section__bg:                crimson;
+$navbar-section__color:             $white;
+$navbar-section__navbar-brand__bg:  shade($navbar-section__bg, 15%);

@@ -1,0 +1,17 @@
+//  Thumbnail Link
+a.thumbnail {
+    padding: $thumbnail__link__padding;
+
+    transition: all 0.2s ease-in-out;
+
+    border-color: $thumbnail__link__border;
+    border-radius: $thumbnail__link__radius;
+    background-color: $thumbnail__link__bg;
+}
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+    border-color: $thumbnail__link--hover__border;
+    background-color: $thumbnail__link--hover__bg;
+}

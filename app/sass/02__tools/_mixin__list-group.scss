@@ -1,0 +1,108 @@
+@mixin list-group-variant($state, $background) {
+
+    $color:  check-color($background, 70, red, white);
+
+    .list-group-#{$state} {
+        //color:             shade($color, 25%);
+        color:  $color;
+
+        .list-group-item {
+            background-color:  $background;
+            border-color:      shade($background, 25%);
+
+            a {
+                color: $color;
+            }
+        }
+
+        a.list-group-item,
+        button.list-group-item {
+            color: $color;
+
+            .list-group-item-heading {
+                color: inherit;
+            }
+
+            &:hover,
+            &:focus {
+                color:             $color;
+                background-color:  darken($background, 5%);
+            }
+            &.active,
+            &.active:hover,
+            &.active:focus {
+                color:             $color;
+                background-color:  darken($background, 5%);
+                border-color:      darken($background, 5%);
+            }
+        }
+    }
+}
+
+@mixin list-group-item-variant($state, $background) {
+
+    @if $list-group__contextual--desaturated {
+
+        $color:       shade($background, 40%);
+        $background:  tint($background, 70%);
+
+        .list-group-item-#{$state} {
+            color:             $color;
+            background-color:  $background;
+        }
+
+        a.list-group-item-#{$state},
+        button.list-group-item-#{$state} {
+            color: $color;
+
+            .list-group-item-heading {
+                color: inherit;
+            }
+
+            &:hover,
+            &:focus {
+                color:             $color;
+                background-color:  shade($background, 5%);
+            }
+            &.active,
+            &.active:hover,
+            &.active:focus {
+                color:             $color;
+                background-color:  shade($background, 5%);
+                border-color:      shade($background, 5%);
+            }
+        }
+    } @else {
+        $color:       white;
+        $background:  $background;
+
+        .list-group-item-#{$state} {
+            color:             $color;
+            background-color:  $background;
+            border-color:      shade($background, 5%);
+        }
+
+        a.list-group-item-#{$state},
+        button.list-group-item-#{$state} {
+            color: $color;
+
+            .list-group-item-heading {
+                color: inherit;
+            }
+
+            &:hover,
+            &:focus {
+                color:             $color;
+                background-color:  shade($background, 5%);
+                border-color:      shade($background, 5%);
+            }
+            &.active,
+            &.active:hover,
+            &.active:focus {
+                color:             $color;
+                background-color:  shade($background, 5%);
+                border-color:      shade($background, 5%);
+            }
+        }
+    }
+}

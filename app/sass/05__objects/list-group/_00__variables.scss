@@ -1,0 +1,28 @@
+//  Units
+$list-group__radius:                     $global__radius;
+$list-group__x:                          $global__x;
+$list-group__y:                          $global__y;
+//  Options
+$list-group__contextual--desaturated:    true !default;
+//  Base
+$list-group__bg:                         $gray__01;
+$list-group__vertical-rhythm:            ($list-group__y * 2);
+//  List Group Item
+$list-group-item__padding:               $list-group__y $list-group__x;
+$list-group-item__border:                $gray__02;
+$list-group-item__radius:                $list-group__radius;
+$list-group-item__link__color:           $primary__color;
+$list-group-item__link__heading__color:  $primary__color;
+$list-group-item__link--hover__color:    $primary__color;
+$list-group-item__link--hover__bg:       shade($list-group__bg, 05%);
+$list-group-item--disabled__bg:          $gray__01;
+$list-group-item--disabled__color:       $gray__04;
+$list-group-item--active__color:         white;
+$list-group-item--active__bg:            $primary__color;
+$list-group-item--active__border:        $primary__color;
+$list-group-item-text--disabled__color:  $gray__04;
+$list-group-item-text--active__color:    $gray__02;
+//  Variations
+$list-group--inverse:                    $neutral__color--dark;
+$list-group--primary:                    $primary__color;
+

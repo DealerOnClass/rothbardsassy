@@ -1,0 +1,44 @@
+//  Units
+$card__gutter:                    $global__gutter;
+$card__radius:                    $global__radius;
+$card__x:                         $global__x;
+$card__y:                         $global__y;
+//  Options
+$card__contextual--desaturated:   false;
+//  Base
+$card__border:                    $gray__02;
+$card__radius:                    $card__radius;
+$card__vertical-rhythm:           ($card__y * 2);
+//  Card-Block
+$card-block__padding:             ($card__y * 2);
+//  Card-Title
+$card-title__vertical-rhythm:     $card__y;
+//  Card-Subtitle
+$card-subtitle__vertical-rhythm:  $card__y;
+//  Card-Link
+$card-link__horizontal-rhythm:    $card__x;
+//  Card-Header
+$card-header__padding:            $card__y ($card__x * 2);
+$card-header__bg:                 $gray__01;
+$card-header__radius:             $card__radius $card__radius 0 0;
+//  Card-Footer
+$card-footer__padding:            $card__y ($card__x * 2);
+$card-footer__bg:                 $gray__01;
+$card-footer__radius:             0 0 $card__radius $card__radius;
+//  Card-Img
+$card-img-overlay__bg:            rgba(0, 0, 0, 0.5);
+$card-img-overlay__padding:       ($card__y * 2) ($card__x * 2);
+//  Card-Deck
+$card-deck__gutter:               $card__gutter;
+//  Card List-Group-Item
+$card__list-group-item__padding:  ($card__y * 2);
+//  Card-Columns
+$card-columns__gutter:            $card__gutter;
+//  Variations
+$card--inverse__bg:               $neutral__color--dark;
+$card--primary__bg:               $primary__color;
+$card--success__bg:               $state--success;
+$card--info__bg:                  $state--info;
+$card--warning__bg:               $state--warning;
+$card--danger__bg:                $state--danger;
+

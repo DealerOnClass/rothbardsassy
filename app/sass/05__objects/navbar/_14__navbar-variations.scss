@@ -1,0 +1,391 @@
+//  Navbar Section
+.navbar-section {
+    color: $navbar-section__color;
+    background-color: $navbar-section__bg;
+
+    .navbar-brand {
+        @include state {
+            background-color: $navbar-section__navbar-brand__bg;
+        }
+    }
+}
+
+//  Navbar Default
+.navbar-default {
+    border-color: $navbar-default__border;
+    background-color: $navbar-default__bg;
+
+    .navbar-brand {
+        color: $navbar-default-brand__color;
+        &:hover,
+        &:focus {
+            color: $navbar-default-brand--hover__color;
+            background-color: $navbar-default-brand--hover__bg;
+        }
+    }
+
+    .navbar-text {
+        color: $navbar-default__color;
+    }
+
+    .navbar-nav {
+        > li > a {
+            color: $navbar-default__link__color;
+
+            &:hover,
+            &:focus {
+                color: $navbar-default__link--hover__color;
+                background-color: $navbar-default__link--hover__bg;
+            }
+        }
+
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-default__link--active__color;
+                background-color: $navbar-default__link--active__bg;
+            }
+        }
+
+        > .disabled > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-default__link--disabled__color;
+                background-color: $navbar-default__link--disabled__bg;
+            }
+        }
+    }
+
+    .navbar-toggle {
+        border-color: $navbar-default-toggle__border;
+        &:hover,
+        &:focus {
+            background-color: $navbar-default-toggle--hover__bg;
+        }
+
+        .icon-bar {
+            background-color: $navbar-default-toggle-icon-bar__bg;
+        }
+    }
+
+    .navbar-collapse,
+    .navbar-form {
+        border-color: $navbar-default__border;
+    }
+
+    .navbar-nav {
+        > .open > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-default__link--active__color;
+                background-color: $navbar-default__link--active__bg;
+            }
+        }
+
+        @media (max-width: $grid-float-breakpoint-max) {
+            .open .dropdown-menu {
+                > li > a {
+                    color: $navbar-default__link__color;
+                    &:hover,
+                    &:focus {
+                        color: $navbar-default__link--hover__color;
+                        background-color: $navbar-default__link--hover__bg;
+                    }
+                }
+                > .active > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        color: $navbar-default__link--active__color;
+                        background-color: $navbar-default__link--active__bg;
+                    }
+                }
+                > .disabled > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        color: $navbar-default__link--disabled__color;
+                        background-color: $navbar-default__link--disabled__bg;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-link {
+        color: $navbar-default__link__color;
+        &:hover {
+            color: $navbar-default__link--hover__color;
+        }
+    }
+
+    .btn-link {
+        color: $navbar-default__link__color;
+        &:hover,
+        &:focus {
+            color: $navbar-default__link--hover__color;
+        }
+        &[disabled],
+        fieldset[disabled] & {
+            &:hover,
+            &:focus {
+                color: $navbar-default__link--disabled__color;
+            }
+        }
+    }
+}
+
+//  Navbar Inverse
+.navbar-inverse {
+    border-color: $navbar-inverse__border;
+    background-color: $navbar-inverse__bg;
+
+    .navbar-brand {
+        color: $navbar-inverse-brand__color;
+        &:hover,
+        &:focus {
+            color: $navbar-inverse-brand--hover__color;
+            background-color: $navbar-inverse-brand--hover__bg;
+        }
+    }
+
+    .navbar-text {
+        color: $navbar-inverse__color;
+    }
+
+    .navbar-nav {
+        > li > a {
+            color: $navbar-inverse__link__color;
+
+            &:hover,
+            &:focus {
+                color: $navbar-inverse__link--hover__color;
+                background-color: $navbar-inverse__link--hover__bg;
+            }
+        }
+
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-inverse__link--active__color;
+                background-color: $navbar-inverse__link--active__bg;
+            }
+        }
+
+        > .disabled > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-inverse__link--disabled__color;
+                background-color: $navbar-inverse__link--disabled__bg;
+            }
+        }
+    }
+
+    .navbar-toggle {
+        border-color: $navbar-inverse-toggle__border;
+        &:hover,
+        &:focus {
+            background-color: $navbar-inverse-toggle--hover__bg;
+        }
+
+        .icon-bar {
+            background-color: $navbar-inverse-toggle-icon-bar__bg;
+        }
+    }
+
+    .navbar-collapse,
+    .navbar-form {
+        border-color: $navbar-inverse__border;
+    }
+
+    .navbar-nav {
+        > .open > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-inverse__link--active__color;
+                background-color: $navbar-inverse__link--active__bg;
+            }
+        }
+
+        @media (max-width: $grid-float-breakpoint-max) {
+            .open .dropdown-menu {
+                > li > a {
+                    color: $navbar-inverse__link__color;
+                    &:hover,
+                    &:focus {
+                        color: $navbar-inverse__link--hover__color;
+                        background-color: $navbar-inverse__link--hover__bg;
+                    }
+                }
+                > .active > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        color: $navbar-inverse__link--active__color;
+                        background-color: $navbar-inverse__link--active__bg;
+                    }
+                }
+                > .disabled > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        color: $navbar-inverse__link--disabled__color;
+                        background-color: $navbar-inverse__link--disabled__bg;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-link {
+        color: $navbar-inverse__link__color;
+        &:hover {
+            color: $navbar-inverse__link--hover__color;
+        }
+    }
+
+    .btn-link {
+        color: $navbar-inverse__link__color;
+        &:hover,
+        &:focus {
+            color: $navbar-inverse__link--hover__color;
+        }
+        &[disabled],
+        fieldset[disabled] & {
+            &:hover,
+            &:focus {
+                color: $navbar-inverse__link--disabled__color;
+            }
+        }
+    }
+}
+
+//  Navbar Dealeron
+.navbar-dealeron {
+    border-color: $navbar-dealeron__border;
+    background-color: $navbar-dealeron__bg;
+
+    .navbar-brand {
+        color: $navbar-dealeron-brand__color;
+    }
+
+    .navbar-text {
+        color: $navbar-dealeron__color;
+    }
+
+    .navbar-nav {
+        > li > a {
+            color: $navbar-dealeron__link__color;
+
+            &:hover,
+            &:focus {
+                color: $navbar-dealeron__link--hover__color;
+                background-color: $navbar-dealeron__link--hover__bg;
+            }
+        }
+
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-dealeron__link--active__color;
+                background-color: $navbar-dealeron__link--active__bg;
+            }
+        }
+
+        > .disabled > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-dealeron__link--disabled__color;
+                background-color: $navbar-dealeron__link--disabled__bg;
+            }
+        }
+    }
+
+    .navbar-toggle {
+        border-color: $navbar-dealeron-toggle__border;
+        &:hover,
+        &:focus {
+            background-color: $navbar-dealeron-toggle--hover__bg;
+        }
+
+        .icon-bar {
+            background-color: $navbar-dealeron-toggle-icon-bar__bg;
+        }
+    }
+
+    .navbar-collapse,
+    .navbar-form {
+        border-color: $navbar-dealeron__border;
+    }
+
+    .navbar-nav {
+        > .open > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $navbar-dealeron__link--active__color;
+                background-color: $navbar-dealeron__link--active__bg;
+            }
+        }
+
+        @media (max-width: $grid-float-breakpoint-max) {
+            .open .dropdown-menu {
+                > li > a {
+                    color: $navbar-dealeron__link__color;
+                    &:hover,
+                    &:focus {
+                        color: $navbar-dealeron__link--hover__color;
+                        background-color: $navbar-dealeron__link--hover__bg;
+                    }
+                }
+                > .active > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        color: $navbar-dealeron__link--active__color;
+                        background-color: $navbar-dealeron__link--active__bg;
+                    }
+                }
+                > .disabled > a {
+                    &,
+                    &:hover,
+                    &:focus {
+                        color: $navbar-dealeron__link--disabled__color;
+                        background-color: $navbar-dealeron__link--disabled__bg;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-link {
+        color: $navbar-dealeron__link__color;
+        &:hover {
+            color: $navbar-dealeron__link--hover__color;
+        }
+    }
+
+    .btn-link {
+        color: $navbar-dealeron__link__color;
+        &:hover,
+        &:focus {
+            color: $navbar-dealeron__link--hover__color;
+        }
+        &[disabled],
+        fieldset[disabled] & {
+            &:hover,
+            &:focus {
+                color: $navbar-dealeron__link--disabled__color;
+            }
+        }
+    }
+}
+

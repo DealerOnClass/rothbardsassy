@@ -1,0 +1,11 @@
+.form-control-static {
+    margin-bottom: 0;
+    padding-top: $form__vertical-padding;
+    padding-bottom: $form__vertical-padding;
+    &.input-lg,
+    &.input-sm {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+

@@ -1,0 +1,17 @@
+.btn-block {
+    display: block;
+
+    width: 100%;
+}
+
+.btn-block + .btn-block {
+    margin-top: $btn-block__vertical-rhythm;
+}
+
+input[type='submit'],
+input[type='reset'],
+input[type='button'] {
+    &.btn-block {
+        width: 100%;
+    }
+}

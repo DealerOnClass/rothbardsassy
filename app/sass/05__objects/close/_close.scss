@@ -1,0 +1,28 @@
+.close {
+    font-family: $close__font;
+
+    float: right;
+
+    color: inherit;
+
+    @include opacity(0.8);
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        text-decoration: none;
+
+        @include opacity(0.6);
+    }
+}
+
+button.close {
+    padding: $close__padding;
+
+    cursor: pointer;
+
+    border: 0;
+    background: transparent;
+
+    -webkit-appearance: none;
+}

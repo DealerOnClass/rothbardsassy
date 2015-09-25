@@ -1,0 +1,13 @@
+.navbar-brand {
+    float: left;
+
+    padding: $navbar-brand__padding;
+
+    @media (min-width: $grid-float-breakpoint) {
+        .navbar > .container &,
+        .navbar > .container-fluid & {
+            margin-left: $navbar-brand__margin-left;
+        }
+    }
+}
+

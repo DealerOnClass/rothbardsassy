@@ -1,0 +1,12 @@
+@media (min-width: $grid-float-breakpoint) {
+    .navbar-left {
+        float: left !important;
+    }
+    .navbar-right {
+        float: right !important;
+
+        ~ .navbar-right {
+            margin-right: 0;
+        }
+    }
+}

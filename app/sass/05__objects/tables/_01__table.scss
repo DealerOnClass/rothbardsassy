@@ -1,0 +1,35 @@
+.table {
+    width: 100%;
+    max-width: 100%;
+
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                padding: $table__padding;
+
+                border-top: $one__pixel solid $table__border;
+            }
+        }
+    }
+
+    > thead > tr > th {
+        vertical-align: bottom;
+
+        border-bottom: $two__pixels solid $table__border;
+    }
+
+    > caption + thead,
+    > colgroup + thead,
+    > thead:first-child {
+        > tr:first-child {
+            > th,
+            > td {
+                border-top: 0;
+            }
+        }
+    }
+}
+

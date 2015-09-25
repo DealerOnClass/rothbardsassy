@@ -1,0 +1,18 @@
+//  Units
+$well__radius:           $global__radius;
+$well__x:                $global__x;
+$well__y:                $global__y;
+//  Base
+$well__bg:               $gray__01;
+$well__border:           $gray__02;
+$well__padding:          $well__x;
+$well__radius:           $well__radius;
+$well__vertical-rhythm:  ($well__y * 2);
+//  Variations
+$well--lg__padding:      $well__padding * $base__line-height;
+$well--lg__radius:       $well__radius * $base__line-height;
+$well--sm__padding:      $well__padding / $base__line-height;
+$well--sm__radius:       $well__radius / $base__line-height;
+$well--xs__padding:      $well--sm__padding / $base__line-height;
+$well--xs__radius:       $well__sm__radius / $base__line-height;
+

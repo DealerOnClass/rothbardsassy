@@ -1,0 +1,30 @@
+//  Units
+$btn__radius:                 $global__radius;
+$btn__x:                      $global__x;
+$btn__y:                      $global__y;
+//  Options
+$btn__has__border:            yes !default;
+$btn__rounded:                false !default;
+//  Base
+$btn__padding:                $btn__y $btn__x;
+$btn__radius:                 $btn__radius;
+$btn--hover__color:           $primary__color;
+$btn--active__shadow:         inset 0 $three__pixels $five__pixels rgba(0, 0, 0, 0.125);
+$btn--disabled__shadow:       none;
+//  Btn-Link
+$btn-link__color:             $gray__07;
+$btn-link--hover__color:      $gray__07;
+$btn-link--disabled__color:   $gray__07;
+//  Btn-Block
+$btn-block__vertical-rhythm:  $btn__y;
+//  Variations
+$btn--xs__font-size:          $h6__font-size / $base__font-ratio;
+$btn--sm__font-size:          $h6__font-size;
+$btn--lg__font-size:          $h4__font-size;
+$btn--default__bg:            $gray__01;
+$btn--primary__bg:            $primary__color;
+$btn--success__bg:            $state--success;
+$btn--info__bg:               $state--info;
+$btn--warning__bg:            $state--warning;
+$btn--danger__bg:             $state--danger;
+

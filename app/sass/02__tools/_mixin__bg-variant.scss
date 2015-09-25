@@ -1,0 +1,14 @@
+@mixin bg-demo-variant($parent, $color) {
+    #{$parent} {
+        background-color:  $color;
+        color:             check-color($color, 50);
+    }
+}
+
+@mixin bg-variant($parent, $color) {
+    #{$parent} {
+        background-color:  $color;
+    }
+}
+
+

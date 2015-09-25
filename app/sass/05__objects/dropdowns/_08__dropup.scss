@@ -1,0 +1,14 @@
+.dropup,
+.navbar-fixed-bottom .dropdown {
+    .caret {
+        content: '';
+
+        border-top: 0;
+        border-bottom: $caret__width-base dashed;
+    }
+    .dropdown-menu {
+        top: auto;
+        bottom: 100%;
+    }
+}
+

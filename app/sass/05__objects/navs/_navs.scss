@@ -1,0 +1,210 @@
+//  Nav Base
+.nav {
+    margin-bottom: 0;
+    padding-left: 0; // Override default ul/ol
+
+    list-style: none;
+
+    @include clearfix;
+
+    > li {
+        position: relative;
+
+        display: block;
+
+        > a {
+            position: relative;
+
+            display: block;
+
+            padding: $nav__link__padding;
+            &:hover,
+            &:focus {
+                background-color: $nav__link--hover__bg;
+            }
+        }
+
+        &.disabled > a {
+            color: $nav__link--disabled__color;
+
+            &:hover,
+            &:focus {
+                cursor: $cursor-disabled;
+
+                color: $nav__link--disabled--hover__color;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .open > a {
+        &,
+        &:hover,
+        &:focus {
+            border-color: $nav__link--hover__border;
+            background-color: $nav__link--hover__bg;
+        }
+    }
+
+    .nav-divider {
+        @include nav-divider;
+    }
+
+    > li > a > img {
+        max-width: none;
+    }
+}
+
+//  Nav Tabs
+.nav-tabs {
+    border-bottom: $one__pixel solid $nav-tabs__border;
+    > li {
+        float: left;
+
+        margin-bottom: $one__pixel * -1;
+
+        > a {
+            margin-right: $two__pixels;
+
+            border: $one__pixel solid transparent;
+
+            @include border-radius($nav-tabs__radius $nav-tabs__radius 0 0);
+            &:hover {
+                border-color: $nav-tabs--hover__border;
+            }
+        }
+
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                cursor: default;
+
+                color: $nav-tabs--active__color;
+                border: $one__pixel solid $nav-tabs--active__border;
+                border-bottom-color: transparent;
+                background-color: $nav-tabs--active__bg;
+            }
+        }
+    }
+    // pulling this in mainly for less shorthand
+    &.nav-justified {
+        @extend .nav-justified;
+        @extend .nav-tabs-justified;
+    }
+}
+
+//  Nav Pills
+.nav-pills {
+    > li {
+        float: left;
+
+        > a {
+            border-radius: $nav-pills__radius;
+        }
+
+        + li {
+            margin-left: $two__pixels;
+        }
+
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: $nav-pills--active__color;
+                background-color: $nav-pills--active__bg;
+            }
+        }
+    }
+}
+
+//  Nav Stacked
+.nav-stacked {
+    > li {
+        float: none;
+        + li {
+            margin-top: $two__pixels;
+            margin-left: 0; // no need for this gap between nav items
+        }
+    }
+}
+
+//  Nav Justified
+.nav-justified {
+    width: 100%;
+
+    > li {
+        float: none;
+        > a {
+            margin-bottom: $nav-justified__link__vertical-rhythm;
+
+            text-align: center;
+        }
+    }
+
+    > .dropdown .dropdown-menu {
+        top: auto;
+        left: auto;
+    }
+
+    @media (min-width:$screen-sm-min) {
+        > li {
+            display: table-cell;
+
+            width: 1%;
+            > a {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+//  Nav Tabs Justified
+.nav-tabs-justified {
+    border-bottom: 0;
+
+    > li > a {
+        margin-right: 0;
+
+        @include border-radius($nav-tabs-justified__radius);
+    }
+
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
+        border: $one__pixel solid $nav-tabs-justified__border;
+    }
+
+    @media (min-width:$screen-sm-min) {
+        > li > a {
+            border-bottom: $one__pixel solid $nav-tabs-justified__border;
+
+            @include border-radius($nav-tabs-justified__radius $nav-tabs-justified__radius 0 0);
+        }
+        > .active > a,
+        > .active > a:hover,
+        > .active > a:focus {
+            border-bottom-color: $nav-tabs-justified--active__border;
+        }
+    }
+}
+
+//  Nav Content
+.tab-content {
+    > .tab-pane {
+        display: none;
+    }
+
+    > .active {
+        display: block;
+    }
+}
+
+//  Nav Tabs
+.nav-tabs .dropdown-menu {
+    margin-top: $one__pixel * -1;
+
+    @include border-top-radius(0);
+}
+
+

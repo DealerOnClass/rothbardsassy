@@ -1,0 +1,4 @@
+@mixin label-variant($color) {
+    background-color:  $color;
+    color:             check-color($color, 70);
+}

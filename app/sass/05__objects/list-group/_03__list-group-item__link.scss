@@ -1,0 +1,22 @@
+a.list-group-item,
+button.list-group-item {
+    color: $list-group-item__link__color;
+
+    .list-group-item-heading {
+        color: $list-group-item__link__heading__color;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+
+        color: $list-group-item__link--hover__color;
+        background-color: $list-group-item__link--hover__bg;
+    }
+}
+
+button.list-group-item {
+    width: 100%;
+
+    text-align: left;
+}

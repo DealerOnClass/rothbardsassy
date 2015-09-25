@@ -1,0 +1,32 @@
+//  Neutral Palette
+$white:                  white;
+$black:                  black;
+$gray__01:               mix($black,$white,10%);
+$gray__02:               mix($black,$white,20%);
+$gray__03:               mix($black,$white,30%);
+$gray__04:               mix($black,$white,40%);
+$gray__05:               mix($black,$white,50%);
+$gray__06:               mix($black,$white,60%);
+$gray__07:               mix($black,$white,70%);
+$gray__08:               mix($black,$white,80%);
+$gray__09:               mix($black,$white,90%);
+//  State Palette
+$state--success:         #5cb85c !default;
+$state--info:            #5bc0de !default;
+$state--warning:         #f0ad4e !default;
+$state--danger:          #d9534f !default;
+//  True Palette
+$palette__blue:          #1c4181;
+$palette__blue--dark:    #15294b;
+$palette__orange:        #f36c0a;
+$palette__gray--dark:    #252931;
+$palette__gray:          #74777d;
+$palette__gray--light:   #f3f3f3;
+//  Abstract Palette
+$primary__color:         $palette__blue;
+$primary__color--dark:   $palette__blue--dark;
+$accent__color:          $palette__orange;
+$neutral__color--dark:   $palette__gray--dark;
+$neutral__color:         $palette__gray;
+$neutral__color--light:  $palette__gray--light;
+

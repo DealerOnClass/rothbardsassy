@@ -1,0 +1,53 @@
+.nav {
+    margin-bottom: 0;
+    padding-left: 0;
+
+    list-style: none;
+
+    @include clearfix;
+
+    %is-relative-block {
+        position: relative;
+        display: block;
+    }
+
+    > li {
+        @extend %is-relative-block;
+
+        > a {
+            @extend %is-relative-block;
+
+            padding: $nav__link__padding;
+            &:hover,
+            &:focus {
+                background-color: $nav__link--hover__bg;
+            }
+        }
+
+        &.disabled > a {
+            color: $nav__link--disabled__color;
+
+            &:hover,
+            &:focus {
+                cursor: $cursor-disabled;
+
+                color: $nav__link--disabled--hover__color;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .open > a {
+        &,
+        &:hover,
+        &:focus {
+            border-color: $nav__link--hover__border;
+            background-color: $nav__link--hover__bg;
+        }
+    }
+
+    .nav-divider {
+        @include nav-divider;
+    }
+}
+

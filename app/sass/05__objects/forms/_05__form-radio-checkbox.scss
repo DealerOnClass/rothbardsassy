@@ -1,0 +1,86 @@
+.radio,
+.checkbox {
+    position: relative;
+
+    display: block;
+
+    margin-top: $form__vertical-padding;
+    margin-bottom: $form__vertical-padding;
+    margin-left: rhythm(0.9);
+
+    label {
+        font-weight: normal;
+
+        margin-bottom: 0;
+        padding-left: ($form__vertical-padding / 2);
+
+        cursor: pointer;
+    }
+}
+
+.radio input[type='radio'],
+.radio-inline input[type='radio'],
+.checkbox input[type='checkbox'],
+.checkbox-inline input[type='checkbox'] {
+    position: absolute;
+
+    margin-top: 4px \9;
+    margin-left: rhythm(-1);
+}
+
+.radio + .radio,
+.checkbox + .checkbox {
+    margin-top: rhythm(-0.25);
+}
+
+.radio-inline,
+.checkbox-inline {
+    font-weight: normal;
+
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 0;
+    margin-left: rhythm(0.75);
+    padding-left: $form__vertical-padding;
+
+    cursor: pointer;
+    vertical-align: middle;
+}
+.radio-inline + .radio-inline,
+.checkbox-inline + .checkbox-inline {
+    margin-top: 0;
+    margin-left: ($form__vertical-padding * 2);
+}
+
+%state--disabled {
+    cursor: $cursor-disabled;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    &[disabled],
+    &.disabled,
+    fieldset[disabled] & {
+        @extend %state--disabled;
+    }
+}
+
+.radio-inline,
+.checkbox-inline {
+    &.disabled,
+    fieldset[disabled] & {
+        @extend %state--disabled;
+    }
+}
+
+.radio,
+.checkbox {
+    &.disabled,
+    fieldset[disabled] & {
+        label {
+            @extend %state--disabled;
+        }
+    }
+}

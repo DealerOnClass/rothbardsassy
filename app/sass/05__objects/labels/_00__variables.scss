@@ -1,0 +1,19 @@
+//  Units
+$label__radius:              $global__radius;
+$label__x:                   $global__x;
+$label__y:                   $global__y;
+//  Base
+$label__color:               $body__color;
+$label__padding:             ($label__y / 2) $label__x;
+$label__radius:              $label__radius;
+$label__font-size:           $h6__font-size;
+//  Label Link
+$label--hover__color:        $gray__02;
+//  Variations
+$label--default__bg:         $primary__color;
+$label--primary__bg:         $accent__color;
+$label--success__bg:         $state--success;
+$label--info__bg:            $state--info;
+$label--warning__bg:         $state--warning;
+$label--danger__bg:          $state--danger;
+

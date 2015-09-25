@@ -1,0 +1,28 @@
+//  Units
+$table__radius:                   $global__radius;
+$table__x:                        $global__x;
+$table__y:                        $global__y;
+//  Options
+$table__has__striped:             true !default;
+$table__has__bordered:            true !default;
+$table__has__hover:               true !default;
+$table__has__condensed:           true !default;
+$table__has__contextual:          true !default;
+$table__is__responsive:           true !default;
+//  Base
+$table__border:                   $gray__02;
+$table__padding:                  $table__y $table__x;
+//  Table-Condensed
+$table--condensed__padding:       ($table__x / 2);
+//  Table-Striped
+$table--striped__bg:              $gray__01;
+//  Table-Hover
+$table--hover__bg:                tint($gray__01, 5%);
+//  Variations
+$table--contextual--desaturated:  yes !default;
+$table--contextual--active:       $primary__color;
+$table--contextual--success:      $state--success;
+$table--contextual--info:         $state--info;
+$table--contextual--warning:      $state--warning;
+$table--contextual--danger:       $state--danger;
+

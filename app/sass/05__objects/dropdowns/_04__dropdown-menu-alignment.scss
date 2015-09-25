@@ -1,0 +1,14 @@
+.pull-right.dropdown-menu,
+.pull-right > .dropdown-menu,
+.dropdown-menu-right {
+    right: 0;
+    left: auto; // Reset the default from `.dropdown-menu`
+}
+
+.pull-left.dropdown-menu,
+.pull-left > .dropdown-menu,
+.dropdown-menu-left {
+    right: auto;
+    left: 0;
+}
+

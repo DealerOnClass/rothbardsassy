@@ -1,0 +1,24 @@
+@if $table__has__bordered == yes {
+    .table-bordered {
+        border: $one__pixel solid $table__border;
+
+        > thead,
+        > tbody,
+        > tfoot {
+            > tr {
+                > th,
+                > td {
+                    border: $one__pixel solid $table__border;
+                }
+            }
+        }
+
+        > thead > tr {
+            > th,
+            > td {
+                border-bottom-width: $two__pixels;
+            }
+        }
+    }
+}
+

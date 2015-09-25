@@ -1,0 +1,94 @@
+//  Units
+$navbar__radius:                       $global__radius;
+$navbar__x:                            $global__x;
+$navbar__y:                            $global__y * 2;
+//  Options
+$navbar__radius:                       $navbar__radius;
+//  Navbar-Collapse
+$navbar-collapse__padding:             $global__gutter / 2;
+$navbar-collapse__max-height:          340px;
+//  Navbar-Brand
+$navbar-brand__padding:                $navbar__y $navbar__x;
+$navbar-brand__margin-left:            ($navbar__x * -1);
+//  Navbar-Toggle
+$navbar-toggle__radius:                0;
+$navbar-toggle__border:                $gray__01;
+$navbar-toggle__icon-bar__bg:          $body__color;
+$navbar-toggle__icon-bar__width:       rhythm(.75);
+$navbar-toggle__padding:               $navbar__y $navbar__x;
+//  Navbar-Nav Link
+$navbar-nav__link__vertical__padding:  $navbar__y;
+//  Navbar-Form
+$navbar-form__vertical-padding:        $navbar__y;
+$navbar-form__horizontal-padding:      $navbar__x;
+$navbar-text__vertical-padding:        $navbar__y;
+$navbar-text__horizontal-margin:       $navbar__x;
+//  Variations
+$navbar-right__padding:                $navbar__x;
+
+
+//  Navbar-Default
+$navbar-default__bg:                     $gray__01;
+$navbar-default__border:                 $gray__02;
+$navbar-default__color:                  $body__color;
+//  Navbar-Default-Brand
+$navbar-default-brand__color:            $body__color;
+$navbar-default-brand--hover__bg:        shade($gray__01, 05%);
+$navbar-default-brand--hover__color:     $body__color;
+//  Navbar-Default-Toggle
+$navbar-default-toggle__border:          $gray__02;
+$navbar-default-toggle--hover__bg:       $gray__02;
+$navbar-default-toggle-icon-bar__bg:     $body__color;
+//  Navbar-Default Link
+$navbar-default__link__color:            $body__color;
+$navbar-default__link--hover__bg:        $gray__02;
+$navbar-default__link--hover__color:     $body__color;
+$navbar-default__link--active__bg:       $gray__02;
+$navbar-default__link--active__color:    $body__color;
+$navbar-default__link--disabled__bg:     $gray__02;
+$navbar-default__link--disabled__color:  $gray__02;
+
+
+//  Navbar-Inverse
+$navbar-inverse__bg:                     invert($gray__01);
+$navbar-inverse__border:                 invert($gray__02);
+$navbar-inverse__color:                  invert($body__color);
+//  Navbar-Inverse Brand
+$navbar-inverse-brand__color:            invert($body__color);
+$navbar-inverse-brand--hover__bg:        invert(shade($gray__01, 05%));
+$navbar-inverse-brand--hover__color:     invert($body__color);
+//  Navbar-Inverse Toggle
+$navbar-inverse-toggle__border:          invert($gray__02);
+$navbar-inverse-toggle--hover__bg:       invert($gray__02);
+$navbar-inverse-toggle-icon-bar__bg:     invert($body__color);
+//  Navbar-Inverse Link
+$navbar-inverse__link__color:            invert($body__color);
+$navbar-inverse__link--hover__bg:        invert($gray__02);
+$navbar-inverse__link--hover__color:     invert($body__color);
+$navbar-inverse__link--active__bg:       invert($gray__02);
+$navbar-inverse__link--active__color:    invert($body__color);
+$navbar-inverse__link--disabled__bg:     invert($gray__02);
+$navbar-inverse__link--disabled__color:  invert($gray__02);
+
+
+//  Navbar-Dealeron
+$navbar-dealeron__bg:                     saturate($primary__color, 20%);
+$navbar-dealeron__border:                 saturate($primary__color, 20%);
+$navbar-dealeron__color:                  white;
+//  Navbar-Dealeron-Brand
+$navbar-dealeron-brand__color:            white;
+$navbar-dealeron-brand--hover__bg:        shade($navbar-dealeron__bg, 10%);
+$navbar-dealeron-brand--hover__color:     white;
+//  Navbar-Dealeron-Toggle
+$navbar-dealeron-toggle__border:          shade($navbar-dealeron__bg, 10%);
+$navbar-dealeron-toggle--hover__bg:       shade($navbar-dealeron__bg, 10%);
+$navbar-dealeron-toggle-icon-bar__bg:     white;
+//  Navbar-Dealeron Link
+$navbar-dealeron__link__color:            white;
+$navbar-dealeron__link--hover__bg:        shade($navbar-dealeron__bg, 10%);
+$navbar-dealeron__link--hover__color:     white;
+$navbar-dealeron__link--active__bg:       shade($navbar-dealeron__bg, 20%);
+$navbar-dealeron__link--active__color:    white;
+$navbar-dealeron__link--disabled__bg:     shade($navbar-dealeron__bg, 2.5%);
+$navbar-dealeron__link--disabled__color:  white;
+

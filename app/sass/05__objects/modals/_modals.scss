@@ -1,0 +1,150 @@
+//  Modal Base
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    z-index: $zindex-modal;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    overflow: hidden;
+
+    outline: 0;
+
+    -webkit-overflow-scrolling: touch;
+
+    &.fade .modal-dialog {
+        @include translate(0, -25%);
+        @include transition-transform(0.3s ease-out);
+    }
+    &.in .modal-dialog {
+        @include translate(0, 0);
+    }
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+//  Modal Dialog
+.modal-dialog {
+    position: relative;
+
+    width: auto;
+    margin: 10px;
+}
+
+//  Modal Content
+.modal-content {
+    position: relative;
+
+    border: $one__pixel solid $modal-content__border;
+    border-radius: $modal-content__radius;
+    outline: 0;
+    background-color: $modal-content__bg;
+    background-clip: padding-box;
+
+    @include box-shadow(0 3px 9px rgba(0,0,0,0.5));
+}
+
+//  Modal Backdrop
+.modal-backdrop {
+    position: fixed;
+    z-index: $zindex-modal-background;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $modal-backdrop__bg;
+    &.fade {
+        @include opacity(0);
+    }
+    &.in {
+        @include opacity($modal-backdrop__opacity);
+    }
+}
+
+//  Modal Header
+.modal-header {
+    padding: $modal-header__padding;
+
+    border-bottom: $one__pixel solid $modal-header__border;
+}
+
+.modal-header .close {
+    margin-top: $two__pixels * -1;
+}
+
+//  Modal Title
+.modal-title {
+    margin: 0;
+}
+
+//  Modal Body
+.modal-body {
+    position: relative;
+
+    padding: $modal-body__padding;
+}
+
+//  Modal Footer
+.modal-footer {
+    padding: $modal-footer__padding;
+
+    text-align: right;
+
+    border-top: $one__pixel solid $modal-footer__border;
+
+    @include clearfix;
+
+    .btn + .btn {
+        margin-bottom: 0;
+        margin-left: $five__pixels;
+    }
+
+    .btn-group .btn + .btn {
+        margin-left: $one__pixel * -1;
+    }
+
+    .btn-block + .btn-block {
+        margin-left: 0;
+    }
+}
+
+//  Modal Scrollbar
+.modal-scrollbar-measure {
+    position: absolute;
+    top: -9999px;
+
+    overflow: scroll;
+
+    width: 50px;
+    height: 50px;
+}
+
+@media (min-width: $screen-sm-min) {
+    .modal-dialog {
+        width: $modal--md;
+        margin: $grid__gutter auto;
+    }
+    .modal-content {
+        @include box-shadow(0 5px 15px rgba(0,0,0,0.5));
+    }
+
+    .modal-sm {
+        width: $modal--sm;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .modal-lg {
+        width: $modal--lg;
+    }
+}

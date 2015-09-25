@@ -1,0 +1,85 @@
+.dropdown-mega-menu {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: auto;
+
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: $grid__gutter/2;
+    padding-left: $grid__gutter/2;
+
+    border: $one__pixel solid $dropdown-mega-menu__border;
+    border-radius: 0;
+    background-color: $dropdown-mega-menu__bg;
+    box-shadow: 0 $six__pixels $twelve__pixels rgba(0,0,0,0.175);
+
+    @media (min-width:  $screen-sm-min) {
+        position: absolute;
+        top: 101%;
+        right: ( $grid__gutter / 2 );
+
+        width: $container-sm - $grid__gutter;
+        margin-right: ( $grid__gutter/2 ) * -1;
+        margin-left: ( $grid__gutter/2 ) * -1;
+
+        border-radius: $dropdown-mega-menu__radius;
+    }
+
+    @media (min-width: $screen-md-min) {
+        width: $container-md - $grid__gutter;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: $container-lg - $grid__gutter;
+    }
+
+    [class^='col-'] {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    li > a {
+        display: block;
+        clear: both;
+
+        padding: $dropdown-mega-menu__link__padding;
+
+        white-space: nowrap;
+
+        color: $dropdown-mega-menu__link__color;
+
+        &:hover,
+        &:focus {
+            color: $dropdown-mega-menu__link--hover__color;
+            background-color: $dropdown-mega-menu__link--hover__bg;
+        }
+    }
+
+    .active > a {
+        &,
+        &:hover,
+        &:focus {
+            color: $dropdown-mega-menu__link--active__color;
+            background-color: $dropdown-mega-menu__link--active__bg;
+        }
+    }
+
+    .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+            color: $dropdown-mega-menu__link--disabled__color;
+        }
+
+        &:hover,
+        &:focus {
+            cursor: $cursor-disabled;
+            text-decoration: none;
+
+            background-color: transparent;
+            background-image: none; // Remove CSS gradient
+
+            @include reset-filter;
+        }
+    }
+}

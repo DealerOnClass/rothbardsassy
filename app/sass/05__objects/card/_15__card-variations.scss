@@ -1,0 +1,21 @@
+.card-inverse {
+    @include card-variant($card--inverse__bg);
+}
+.card-primary {
+    @include card-variant($card--primary__bg);
+}
+.card-success {
+    @include card-variant($card--success__bg);
+}
+.card-info {
+    @include card-variant($card--info__bg);
+}
+.card-warning {
+    @include card-variant($card--warning__bg);
+}
+.card-danger {
+    @include card-variant($card--danger__bg);
+}
+.card-flush {
+    border: 0 none;
+}

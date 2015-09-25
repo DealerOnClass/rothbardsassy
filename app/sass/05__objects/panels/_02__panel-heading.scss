@@ -1,0 +1,9 @@
+.panel-heading {
+    padding: $panel-heading__padding;
+
+    border-bottom: $one__pixel solid transparent;
+
+    > .dropdown .dropdown-toggle {
+        color: inherit;
+    }
+}

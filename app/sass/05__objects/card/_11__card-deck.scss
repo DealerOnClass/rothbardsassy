@@ -1,0 +1,20 @@
+.card-deck {
+    display: table;
+
+    width: 100%;
+
+    table-layout: fixed;
+    border-spacing: $card-deck__gutter;
+
+    .card {
+        display: table-cell;
+
+        width: 1%;
+
+        vertical-align: top;
+    }
+}
+.card-deck-wrapper {
+    margin-right: $card-deck__gutter * -1;
+    margin-left: $card-deck__gutter * -1;
+}

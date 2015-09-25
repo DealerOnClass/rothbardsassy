@@ -1,0 +1,8 @@
+@if $table__has__contextual {
+    @include table-row-variant('active',    $table--contextual--active);
+    @include table-row-variant('success',   $table--contextual--success);
+    @include table-row-variant('info',      $table--contextual--info);
+    @include table-row-variant('warning',   $table--contextual--warning);
+    @include table-row-variant('danger',    $table--contextual--danger);
+}
+

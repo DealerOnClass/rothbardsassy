@@ -1,0 +1,30 @@
+.card {
+    .list-group-item {
+        padding-right: $card__list-group-item__padding;
+        padding-left: $card__list-group-item__padding;
+
+        border-right: 0 none;
+        border-left: 0 none;
+        &:first-child {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        &:last-child {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    > .list-group:first-child {
+        .list-group-item:first-child {
+            border-radius: $card__radius $card__radius 0 0;
+        }
+    }
+
+    > .list-group:last-child {
+        .list-group-item:last-child {
+            border-radius: 0 0 $card__radius $card__radius;
+        }
+    }
+}
+

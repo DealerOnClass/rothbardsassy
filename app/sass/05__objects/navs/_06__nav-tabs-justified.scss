@@ -1,0 +1,30 @@
+.nav-tabs-justified {
+    border-bottom: 0;
+
+    > li > a {
+        margin-right: 0;
+
+        border-radius: $nav-tabs-justified__radius;
+    }
+
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
+        border: $one__pixel solid $nav-tabs-justified__border;
+    }
+
+    @media (min-width:$screen-sm-min) {
+        > li > a {
+            border-bottom: $one__pixel solid $nav-tabs-justified__border;
+
+            border-radius: $nav-tabs-justified__radius $nav-tabs-justified__radius 0 0;
+        }
+
+        > .active > a,
+        > .active > a:hover,
+        > .active > a:focus {
+            border-bottom-color: $nav-tabs-justified--active__border;
+        }
+    }
+}
+

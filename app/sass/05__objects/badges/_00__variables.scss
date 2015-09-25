@@ -1,0 +1,12 @@
+//  Units
+$badge__x:                   $global__x;
+$badge__y:                   $global__y;
+//  Base
+$badge__bg:                  $gray__02;
+$badge__color:               $body__color;
+$badge__padding:             0 $badge__x;
+$badge__radius:              ($badge__x * 2);
+$badge--active__bg:          shade($primary__color, 30%);
+$badge--active__color:       white;
+$badge__link--hover__color:  $gray__02;
+

@@ -1,0 +1,33 @@
+.label {
+    font-size: $label__font-size;
+
+    display: inline;
+
+    padding: $label__padding;
+
+    text-align: center;
+    vertical-align: baseline;
+    white-space: nowrap;
+
+    color: $label__color;
+    border-radius: $label__radius;
+
+    &:empty {
+        display: none;
+    }
+
+    .btn & {
+        position: relative;
+        top: $one__pixel * -1;
+    }
+}
+
+a.label {
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        text-decoration: none;
+
+        color: $label--hover__color;
+    }
+}

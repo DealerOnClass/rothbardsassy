@@ -1,0 +1,13 @@
+//
+//  Text Overflow:
+//  Use instead of writing out :hover,:active,:focus
+//
+//  Usage:
+//  .list__item {
+//      @include text-overflow-ellipsis;
+//  }
+@mixin text-overflow-ellipsis {
+    overflow:       hidden;
+    text-overflow:  ellipsis;
+    white-space:    nowrap;
+}

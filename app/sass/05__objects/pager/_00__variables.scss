@@ -1,0 +1,13 @@
+//  Units
+$pager__radius:                    $global__radius;
+$pager__x:                         $global__x;
+$pager__y:                         $global__y;
+//  Pager Link
+$pager__link__vertical-padding:    $pager__y;
+$pager__link__horizontal-padding:  $pager__x * 2;
+$pager__link__bg:                  $gray__01;
+$pager__link__border:              $gray__02;
+$pager__link__radius:              ($pager__y * 2) + $base__font-unit;
+$pager__link--hover__bg:           shade($gray__01, 05%);
+$pager__link--disabled__color:     $gray__04;
+

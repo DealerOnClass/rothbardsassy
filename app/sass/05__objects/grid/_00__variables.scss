@@ -1,0 +1,11 @@
+//  Options
+$grid__has__pull:            yes !default;
+$grid__has__push:            yes !default;
+$grid__has__offset:          yes !default;
+//  Properties
+$grid__gutter:               $global__gutter;
+$grid__columns:              12;
+//  Media Query
+$grid-float-breakpoint:      $screen-sm-min !default;
+$grid-float-breakpoint-max:  ($grid-float-breakpoint - 1) default;
+

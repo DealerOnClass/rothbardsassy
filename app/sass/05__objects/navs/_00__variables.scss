@@ -1,0 +1,29 @@
+//  Units
+$nav__radius:                           $global__radius;
+$nav__x:                                $global__x;
+$nav__y:                                $global__y;
+//  Options
+$nav__link__padding:                    $nav__y $nav__x;
+$nav__link--hover__bg:                  shade($gray__01, 05%);
+$nav__link--hover__border:              $gray__02;
+$nav__link--disabled__color:            $gray__02;
+$nav__link--disabled--hover__color:     $gray__02;
+//  Nav-Tabs
+$nav-tabs__radius:                      $nav__radius;
+$nav-tabs__border:                      $gray__02;
+$nav-tabs--hover__border:               $gray__02;
+$nav-tabs--active__color:               white;
+$nav-tabs--active__bg:                  $primary__color;
+$nav-tabs--active__border:              $primary__color;
+//  Nav-Pills
+$nav-pills__radius:                     $nav-tabs__radius;
+$nav-pills--active__color:              white;
+$nav-pills--active__bg:                 $primary__color;
+$nav-pills--primary:                    saturate($primary__color, 20%);
+//  Nav-Justified
+$nav-justified__link__vertical-rhythm:  $nav__y;
+//  Nav-Tabs-Justified
+$nav-tabs-justified__radius:            $nav-tabs__radius;
+$nav-tabs-justified__border:            $nav-tabs__border;
+$nav-tabs-justified--active__border:    $nav-tabs__border;
+

@@ -1,0 +1,23 @@
+//  Ratio
+$master__font-size:     18;
+$base__font-size:       ($master__font-size / 16) * 100%;
+$base__font-ratio:      1.333;
+$base__font-unit:       1em;
+$base__line-height:     1.5;
+//  Typeface
+$sans--regular:         'AvenirRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$sans--semibold:        'AvenirMedium', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$sans--bold:            'AvenirHeavy', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$mono--regular:         'SourceCodePro' !default;
+//  Body
+$body__font:            $sans--regular;
+$body__line-height:     $base__line-height;
+$body__color:           $neutral__color--dark;
+//  Headings
+$h5__font-size:         $base__font-unit;
+$h6__font-size:         $h5__font-size / $base__font-ratio;
+$h4__font-size:         $h5__font-size * $base__font-ratio;
+$h3__font-size:         $h4__font-size * $base__font-ratio;
+$h2__font-size:         $h3__font-size * $base__font-ratio;
+$h1__font-size:         $h2__font-size * $base__font-ratio;
+

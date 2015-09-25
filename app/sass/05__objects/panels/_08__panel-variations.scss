@@ -1,0 +1,18 @@
+.panel-default {
+    @include panel-variant($panel--default);
+}
+.panel-primary {
+    @include panel-variant($panel--primary);
+}
+.panel-success {
+    @include panel-contextual-variant($panel--success);
+}
+.panel-info {
+    @include panel-contextual-variant($panel--info);
+}
+.panel-warning {
+    @include panel-contextual-variant($panel--warning);
+}
+.panel-danger {
+    @include panel-contextual-variant($panel--danger);
+}

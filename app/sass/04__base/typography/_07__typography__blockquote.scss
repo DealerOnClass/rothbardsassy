@@ -1,0 +1,14 @@
+blockquote {
+    footer,
+    small,
+    .small {
+        font-size: $h6__font-size;
+
+        display: block;
+    }
+}
+
+blockquote.pull-right,
+.blockquote-reverse {
+    text-align: right;
+}

@@ -1,0 +1,116 @@
+//  Root
+html { font-size:   $base__font-size; }
+
+body {
+    color:          $body__color;
+    font-family:    $body__font;
+    line-height:    $body__line-height;
+    min-width:      300px;
+}
+
+//  Headings
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    font-family:    $heading__font;
+    @include rhythm-rem(margin-bottom, 1);
+
+    small,
+    .small {
+        font-size:  $heading__small__size;
+        color:      $heading__small__color;
+    }
+}
+
+h1, .h1 { font-size: $h1__font-size; }
+h2, .h2 { font-size: $h2__font-size; }
+h3, .h3 { font-size: $h3__font-size; }
+h4, .h4 { font-size: $h4__font-size; }
+h5, .h5 { font-size: $h5__font-size; }
+h6, .h6,
+small, .small { font-size: $h6__font-size; }
+
+//  Display Heading
+.display-1 { font-size: $display-1__font-size; }
+.display-2 { font-size: $display-2__font-size; }
+.display-3 { font-size: $display-3__font-size; }
+.display-4 { font-size: $display-4__font-size; }
+
+//  Links
+a {
+    color:  $link__color;
+    @include state {
+        color: $link--hover__color;
+    }
+}
+
+//  Strong
+strong {
+    font-family: $strong__font;
+    font-weight: normal;
+}
+
+//  Vertical Rhythm
+p,
+ul,
+ol,
+address,
+dd,
+table,
+legend { margin-bottom: rhythm(1); }
+
+//  List
+ul,
+ol {
+    @if $list__is-inside {
+        list-style-position: inside;
+    }
+    ul,
+    ol {
+        padding-left: $list__padding;
+    }
+}
+
+//  Blockquote
+blockquote {
+    footer,
+    small,
+    .small {
+        display:    block;
+        font-size:  $h6__font-size;
+    }
+}
+
+blockquote.pull-right,
+.blockquote-reverse {
+    text-align: right;
+}
+
+//  Definition List
+dt {
+    font-family: $strong__font;
+    font-weight: normal;
+}
+
+//  Code
+code,
+kbd,
+pre,
+samp { font-family: $code__font; }
+
+mark {
+    background:   $mark__bg;
+    color:        $mark__color;
+}
+
+//  Tables
+th,
+caption {
+    text-align: left;
+    vertical-align: bottom;
+}
+
+

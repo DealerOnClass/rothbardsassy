@@ -1,0 +1,36 @@
+.navbar-nav {
+    > li > a {
+        padding-top: $navbar-nav__link__vertical__padding;
+        padding-bottom: $navbar-nav__link__vertical__padding;
+    }
+
+    @media (max-width: $grid-float-breakpoint-max) {
+        .open .dropdown-menu {
+            position: static;
+
+            float: none;
+
+            width: auto;
+            margin-top: 0;
+
+            border: 0;
+            background-color: transparent;
+            box-shadow: none;
+            > li > a,
+            .dropdown-header {
+                padding: 5px 15px 5px 25px;
+            }
+        }
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+        float: left;
+
+        margin: 0;
+
+        > li {
+            float: left;
+        }
+    }
+}
+

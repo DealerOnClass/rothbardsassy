@@ -1,0 +1,19 @@
+//  Units
+$progress__radius:           $global__radius;
+$progress__x:                $global__x;
+$progress__y:                $global__y;
+//  Options
+$progress__rounded:          false !default;
+//  Base
+$progress__height:           ($progress__y * 2);
+$progress__radius:           $progress__radius;
+$progress__vertical-rhythm:  ($progress__y * 2);
+//  Progress Bar
+$progress-bar__color:        white;
+$progress-bar__fg:           $primary__color;
+$progress-bar__bg:           $gray__01;
+$progress-bar--success__bg:  $state--success;
+$progress-bar--info__bg:     $state--info;
+$progress-bar--warning__bg:  $state--warning;
+$progress-bar--danger__bg:   $state--danger;
+

@@ -1,0 +1,15 @@
+@if $table__has__condensed == yes {
+    .table-condensed {
+        > thead,
+        > tbody,
+        > tfoot {
+            > tr {
+                > th,
+                > td {
+                    padding: $table--condensed__padding;
+                }
+            }
+        }
+    }
+}
+

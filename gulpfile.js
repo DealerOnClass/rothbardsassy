@@ -25,7 +25,10 @@ var js__src      = 'app/js/*.js',
 gulp.task('scripts', function() {
     return gulp.src([
         'app/js/jquery.js',
-        'app/js/bootstrap.js'
+        'app/js/tether.min.js',
+        'app/js/bootstrap.js',
+        'app/js/jquery.easing.min.js',
+        'app/js/functions.js'
     ])
         .pipe(concat('scripts.js'))      // concat
         .pipe(uglify())                  // uglify

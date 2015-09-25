@@ -1,0 +1,33 @@
+@mixin table-row-variant($state, $background) {
+
+    @if $table--contextual--desaturated == yes {
+        $background:    tint($background, 70%);
+    }
+    @if $table--contextual--desaturated != yes {
+        $backgound:     $background;
+    }
+
+    .table > thead > tr,
+    .table > tbody > tr,
+    .table > tfoot > tr {
+        > td.#{$state},
+        > th.#{$state},
+        &.#{$state} > td,
+        &.#{$state} > th {
+            @if $table--contextual--desaturated != yes {
+                color:             white;
+            }
+            background-color:  $background;
+        }
+    }
+
+    .table-hover > tbody > tr {
+        > td.#{$state}:hover,
+        > th.#{$state}:hover,
+        &.#{$state}:hover > td,
+        &:hover > .#{$state},
+        &.#{$state}:hover > th {
+            background-color: darken($background, 5%);
+        }
+    }
+}

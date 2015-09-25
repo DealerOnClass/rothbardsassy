@@ -1,0 +1,38 @@
+//  Alert Base
+.alert {
+    margin-bottom: $alert__vertical-rhythm;
+    padding: $alert__padding;
+
+    border: $one__pixel solid transparent;
+    border-radius: $alert__radius;
+
+    > a {
+        color: inherit;
+    }
+}
+
+//  Alert Dismissible
+.alert-dismissible .close {
+    position: relative;
+    top: $two__pixels * -1;
+    right: $alert__padding;
+
+    color: inherit;
+}
+
+//  Alert Variations
+.alert-success {
+    @include alert-variant($alert--success__bg);
+}
+.alert-info {
+    @include alert-variant($alert--info__bg);
+}
+.alert-warning {
+    @include alert-variant($alert--warning__bg);
+}
+.alert-danger {
+    @include alert-variant($alert--danger__bg);
+}
+.alert-warning {
+    @include alert-variant($alert--warning__bg);
+}

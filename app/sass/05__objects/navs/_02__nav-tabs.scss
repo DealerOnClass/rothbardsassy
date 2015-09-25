@@ -1,0 +1,41 @@
+.nav-tabs {
+    border-bottom: $one__pixel solid $nav-tabs__border;
+    > li {
+        float: left;
+
+        margin-bottom: $one__pixel * -1;
+
+        > a {
+            margin-right: $two__pixels;
+
+            border: $one__pixel solid transparent;
+
+            border-radius: $nav-tabs__radius $nav-tabs__radius 0 0;
+            &:hover {
+                border-color: $nav-tabs--hover__border;
+            }
+        }
+
+        &.active > a {
+            &,
+            &:hover,
+            &:focus {
+                cursor: default;
+
+                color: $nav-tabs--active__color;
+                border: $one__pixel solid $nav-tabs--active__border;
+                border-bottom-color: transparent;
+                background-color: $nav-tabs--active__bg;
+            }
+        }
+    }
+    //
+    //  Revisit
+    //
+    // pulling this in mainly for less shorthand
+    //&.nav-justified {
+    //    @extend .nav-justified;
+    //    @extend .nav-tabs-justified;
+    //}
+}
+

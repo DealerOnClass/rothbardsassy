@@ -1,0 +1,167 @@
+//  Table Base
+.table {
+    width: 100%;
+    max-width: 100%;
+
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                padding: $table__padding;
+
+                border-top: $one__pixel solid $table__border;
+            }
+        }
+    }
+
+    > thead > tr > th {
+        vertical-align: bottom;
+
+        border-bottom: $two__pixels solid $table__border;
+    }
+
+    > caption + thead,
+    > colgroup + thead,
+    > thead:first-child {
+        > tr:first-child {
+            > th,
+            > td {
+                border-top: 0;
+            }
+        }
+    }
+}
+
+//  Table Condensed
+@if $table__has__condensed == yes {
+    .table-condensed {
+        > thead,
+        > tbody,
+        > tfoot {
+            > tr {
+                > th,
+                > td {
+                    padding: $table--condensed__padding;
+                }
+            }
+        }
+    }
+}
+
+//  Table Bordered
+@if $table__has__bordered == yes {
+    .table-bordered {
+        border: $one__pixel solid $table__border;
+
+        > thead,
+        > tbody,
+        > tfoot {
+            > tr {
+                > th,
+                > td {
+                    border: $one__pixel solid $table__border;
+                }
+            }
+        }
+
+        > thead > tr {
+            > th,
+            > td {
+                border-bottom-width: $two__pixels;
+            }
+        }
+    }
+}
+
+//  Table Striped
+@if $table__has__striped {
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: $table--striped__bg;
+    }
+}
+
+//  Table Hover
+@if $table__has__hover {
+    .table-hover > tbody > tr:hover {
+        background-color: $table--hover__bg;
+    }
+}
+
+//  Table Variations
+@if $table__has__contextual {
+    @include table-row-variant('active',    $table--contextual--active);
+    @include table-row-variant('success',   $table--contextual--success);
+    @include table-row-variant('info',      $table--contextual--info);
+    @include table-row-variant('warning',   $table--contextual--warning);
+    @include table-row-variant('danger',    $table--contextual--danger);
+}
+
+//  Table Responsive
+@if $table__is__responsive {
+    .table-responsive {
+        overflow-x: auto;
+
+        min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+
+        @media screen and (max-width: $screen-xs-max) {
+            overflow-y: hidden;
+
+            width: 100%;
+
+            border: $one__pixel solid $table__border;
+
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+
+            > .table {
+                margin-bottom: 0;
+
+                > thead,
+                > tbody,
+                > tfoot {
+                    > tr {
+                        > th,
+                        > td {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+
+            // Special overrides for the bordered tables
+            > .table-bordered {
+                border: 0;
+
+                // Nuke the appropriate borders so that the parent can handle them
+                > thead,
+                > tbody,
+                > tfoot {
+                    > tr {
+                        > th:first-child,
+                        > td:first-child {
+                            border-left: 0;
+                        }
+                        > th:last-child,
+                        > td:last-child {
+                            border-right: 0;
+                        }
+                    }
+                }
+
+                // Only nuke the last row's bottom-border in `tbody` and `tfoot` since
+                // chances are there will be only one `tr` in a `thead` and that would
+                // remove the border altogether.
+                > tbody,
+                > tfoot {
+                    > tr:last-child {
+                        > th,
+                        > td {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+.caret {
+    display: inline-block;
+
+    width: 0;
+    height: 0;
+    margin-left: $two__pixels;
+
+    vertical-align: middle;
+
+    border-top: $caret-width-base dashed;
+    border-top: $caret-width-base solid \9; // IE8
+    border-right: $caret-width-base solid transparent;
+    border-left: $caret-width-base solid transparent;
+}
+
+//  Dropdown Base
+.dropup,
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle:focus {
+    outline: 0;
+}
+
+//  Dropdown Menu
+.dropdown-menu {
+    position: absolute;
+    z-index: $zindex-dropdown;
+    top: 100%;
+    left: 0;
+
+    display: none; // none by default, but block on "open" of the menu
+    float: left;
+
+    min-width: 160px;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    list-style: none;
+
+    text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+
+    border: $one__pixel solid $dropdown-menu__border;
+    border-radius: $dropdown-menu__radius;
+    background-color: $dropdown-menu__bg;
+    background-clip: padding-box;
+
+    @include rhythm-actual-rem(font-size, 1);
+    @include box-shadow(0 $six__pixels $twelve__pixels rgba(0,0,0,0.175));
+
+    .divider {
+        @include nav-divider($dropdown-menu__divider__bg);
+    }
+
+    > li > a {
+        display: block;
+        clear: both;
+
+        padding: $dropdown-menu__link__padding;
+
+        white-space: nowrap; // prevent links from randomly breaking onto new lines
+
+        color: $dropdown-menu__link__color;
+
+        &:hover,
+        &:focus {
+            color: $dropdown-menu__link--hover__color;
+            background-color: $dropdown-menu__link--hover__bg;
+        }
+    }
+    .active > a {
+        &,
+        &:hover,
+        &:focus {
+            color: $dropdown-menu__link--active__color;
+            background-color: $dropdown-menu__link--active__bg;
+        }
+    }
+    .disabled > a {
+        &,
+        &:hover,
+        &:focus {
+            color: $dropdown-menu__link--disabled__color;
+        }
+
+        &:hover,
+        &:focus {
+            cursor: $cursor-disabled;
+            text-decoration: none;
+
+            background-color: transparent;
+            background-image: none; // Remove CSS gradient
+
+            @include reset-filter;
+        }
+    }
+}
+
+.open {
+    > .dropdown-menu {
+        display: block;
+    }
+}
+
+//  Dropdown Menu Alignment
+.pull-right.dropdown-menu,
+.pull-right > .dropdown-menu,
+.dropdown-menu-right {
+    right: 0;
+    left: auto; // Reset the default from `.dropdown-menu`
+}
+
+.pull-left.dropdown-menu,
+.pull-left > .dropdown-menu,
+.dropdown-menu-left {
+    right: auto;
+    left: 0;
+}
+
+//  Dropdown Header
+.dropdown-header {
+    font-size: $dropdown-header__font-size;
+
+    display: block;
+
+    white-space: nowrap; // as with > li > a
+
+    color: $dropdown-header__color;
+
+    @include rhythm-rem(padding, $dropdown-header__vertical-padding $dropdown-header__horizontal-padding);
+}
+
+//  Dropdown Backdrop
+.dropdown-backdrop {
+    position: fixed;
+    z-index: ($zindex-dropdown - 10);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+//  Dropup
+.dropup,
+.navbar-fixed-bottom .dropdown {
+    .caret {
+        content: '';
+
+        border-top: 0;
+        border-bottom: $caret-width-base dashed;
+        border-bottom: $caret-width-base solid \9; // IE8
+    }
+    .dropdown-menu {
+        top: auto;
+        bottom: 100%;
+        //margin-bottom:      2px;
+    }
+}

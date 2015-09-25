@@ -1,0 +1,33 @@
+.modal-open {
+    overflow: hidden;
+}
+
+.modal {
+    position: fixed;
+    z-index: $zindex-modal;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    overflow: hidden;
+
+    outline: 0;
+
+    -webkit-overflow-scrolling: touch;
+
+    &.fade .modal-dialog {
+        transform: translate(0, -25%);
+        transition: transform 0.3 ease-out;
+
+    }
+    &.in .modal-dialog {
+        transform: translate(0, 0);
+    }
+}
+
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}

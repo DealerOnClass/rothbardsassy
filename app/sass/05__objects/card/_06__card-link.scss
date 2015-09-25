@@ -1,0 +1,9 @@
+.card-link {
+    &:hover {
+        text-decoration: none;
+    }
+
+    + .card-link {
+        margin-left: $card-link__horizontal-rhythm;
+    }
+}

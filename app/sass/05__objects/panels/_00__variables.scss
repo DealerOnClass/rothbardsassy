@@ -1,0 +1,34 @@
+//  Units
+$panel__radius:                   $global__radius;
+$panel__x:                        $global__x;
+$panel__y:                        $global__y;
+//  Options
+$panel__contextual--desaturated:  true !default;
+//  Base
+$panel__bg:                       white;
+$panel__radius:                   $panel__radius;
+$panel__shadow:                   0 $one__pixel $one__pixel rgba(0,0,0,0.05);
+$panel__vertical-rhythm:          ($panel__y * 2);
+//  Panel Heading
+$panel-heading__border:           $gray__02;
+$panel-heading__padding:          $panel__y $panel__x;
+//  Panel Body
+$panel-body__padding:             $panel__y $panel__x;
+//  Panel Footer
+$panel-footer__bg:                $gray__01;
+$panel-footer__border:            $gray__02;
+$panel-footer__padding:           $panel__y $panel__x;
+//  Panel Caption
+$panel__caption__padding:         $panel__y $panel__x;
+//  Panel-Group
+$panel-group__vertical-rhythm:    ($panel__y * 2);
+//  Panel Table
+$panel__table__border:            $gray__02;
+//  Variations
+$panel--default:                  $gray__01;
+$panel--primary:                  $primary__color;
+$panel--success:                  $state--success;
+$panel--info:                     $state--info;
+$panel--warning:                  $state--warning;
+$panel--danger:                   $state--danger;
+

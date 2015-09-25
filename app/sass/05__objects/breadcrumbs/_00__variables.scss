@@ -1,0 +1,19 @@
+//  Units
+$breadcrumb__radius:               $global__radius;
+$breadcrumb__x:                    $global__x;
+$breadcrumb__y:                    $global__y;
+//  Options
+$breadcrumb__rounded:              false !default;
+//  Base
+$breadcrumb__bg:                   $gray__01;
+$breadcrumb__border:               $gray__02;
+$breadcrumb__padding:              $breadcrumb__y $breadcrumb__x;
+$breadcrumb__radius:               $breadcrumb__radius;
+$breadcrumb__vertical-rhythm:      ($breadcrumb__y * 2);
+//  Breadcrumb Separator
+$breadcrumb__separator__padding:   0 ($breadcrumb__x / 2);
+$breadcrumb__separator:            "/";
+$breadcrumb__separator__color:     $body__color;
+//  Breadcrumb Link
+$breadcrumb__link--active__color:  $body__color;
+

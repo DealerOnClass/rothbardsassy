@@ -1,0 +1,10 @@
+.has-success {
+    @include form-control-validation($form-control--success, $form-control--success, $form-control--success);
+}
+.has-warning {
+    @include form-control-validation($form-control--warning, $form-control--warning, $form-control--warning);
+}
+.has-error {
+    @include form-control-validation($form-control--danger, $form-control--danger, $form-control--danger);
+}
+

@@ -1,0 +1,8 @@
+.card {
+    position: relative;
+
+    margin-bottom: $card__vertical-rhythm;
+
+    border: $one__pixel solid $card__border;
+    border-radius: $card__radius;
+}

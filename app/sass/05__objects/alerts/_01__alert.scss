@@ -1,0 +1,28 @@
+.alert {
+    margin-bottom: $alert__vertical-rhythm;
+    padding: $alert__padding;
+
+    border: $one__pixel solid transparent;
+    border-radius: $alert__radius;
+
+    > a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-top: 0;
+
+        @include rhythm-rem(margin-bottom, 0.5);
+    }
+}

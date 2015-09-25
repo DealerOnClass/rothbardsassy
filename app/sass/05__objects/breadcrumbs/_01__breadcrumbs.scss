@@ -1,0 +1,34 @@
+.breadcrumb {
+    margin-bottom: $breadcrumb__vertical-rhythm;
+
+    list-style: none;
+
+    border: $one__pixel solid $breadcrumb__border;
+    @if $breadcrumb__rounded {
+        padding: $breadcrumb__y ($breadcrumb__x * 1.25);
+        border-radius: ($breadcrumb__y * 2) + $base__font-unit;
+    } @else {
+        padding: $breadcrumb__padding;
+        border-radius: $breadcrumb__radius;
+    }
+    background-color: $breadcrumb__bg;
+
+    > li {
+        display: inline-block;
+
+        + li:before {
+            $nbsp: '\00a0';
+
+            padding: $breadcrumb__separator__padding;
+
+            content: '#{$breadcrumb__separator}#{$nbsp}';
+
+            color: $breadcrumb__separator__color;
+        }
+    }
+
+    > .active {
+        color: $breadcrumb__link--active__color;
+    }
+}
+

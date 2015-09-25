@@ -1,0 +1,12 @@
+.dropdown-header {
+    font-size: $dropdown-header__font-size;
+
+    display: block;
+
+    white-space: nowrap; // as with > li > a
+
+    color: $dropdown-header__color;
+
+    @include rhythm-rem(padding, $dropdown-header__vertical-padding $dropdown-header__horizontal-padding);
+}
+

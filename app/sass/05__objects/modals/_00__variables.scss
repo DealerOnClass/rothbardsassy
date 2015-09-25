@@ -1,0 +1,25 @@
+//  Units
+$modal__radius:            $global__radius;
+$modal__x:                 $global__x;
+$modal__y:                 $global__y;
+//  Modal-Content
+$modal-content__bg:        white;
+$modal-content__border:    $gray__02;
+$modal-content__radius:    $modal__radius;
+$modal-content__shadow:    0 $three__pixels $nine__pixels rgba(0,0,0,0.5);
+//  Modal-Backdrop
+$modal-backdrop__bg:       $gray__01;
+$modal-backdrop__opacity:  .5;
+//  Modal-Header
+$modal-header__padding:    $modal__y $modal__x;
+$modal-header__border:     $gray__02;
+//  Modal-Body
+$modal-body__padding:      $modal__y $modal__x;
+//  Modal-Footer
+$modal-footer__padding:    $modal__y $modal__x;
+$modal-footer__border:     $gray__02;
+//  Variations
+$modal--lg:                900px !default;
+$modal--md:                600px !default;
+$modal--sm:                300px !default;
+

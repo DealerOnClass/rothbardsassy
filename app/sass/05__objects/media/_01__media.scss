@@ -1,0 +1,8 @@
+.media {
+    margin-top: $media__vertical-rhythm;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
