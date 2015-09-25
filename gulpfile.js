@@ -3,6 +3,7 @@
 var gulp       = require('gulp'),
     autoprefix = require('gulp-autoprefixer'),
     concat     = require('gulp-concat'),
+    imagemin   = require('gulp-image-optimization'),
     inline     = require('gulp-inline-source'),
     minify     = require('gulp-minify-html'),
     sass       = require('gulp-sass'),
@@ -16,6 +17,8 @@ var js__src      = 'app/js/*.js',
     js__build    = 'build/js',
     html__src    = 'app/*.html',
     html__build  = 'build',
+    img__src     = 'app/img',
+    img__build   = 'img',
     sass__src    = 'app/sass/**/*.scss',
     sass__build  = 'build/css',
     server__path = '.';
@@ -23,7 +26,7 @@ var js__src      = 'app/js/*.js',
 //  01__Scripts
 //
 gulp.task('scripts', function() {
-    return gulp.src([
+    gulp.src([
         'app/js/jquery.js',
         'app/js/tether.min.js',
         'app/js/bootstrap.js',
@@ -55,22 +58,48 @@ gulp.task('html', function() {
         .pipe(reload({ stream: true })); // reload server
 });
 
-//  04__Inline
+//  04__Img
 //
-gulp.task('inline', ['scripts', 'styles', 'html'], function() {
+gulp.task('imagemin', function(cb) {
+    gulp.src([img__src + '*', img__src + '/*.jpg'])
+        .pipe(imagemin({
+            optimizationLevel: 5,
+            progressive: true,
+            interlaced: true
+        }))
+        .pipe(gulp.dest(img__build)).on('end', cb).on('error', cb);
+});
+
+//  05__Inline
+//
+gulp.task('inline', ['scripts', 'styles', 'html', 'imagemin'], function() {
+    gulp.src(html__build + '/index.html')
+        .pipe(inline())
+        .pipe(gulp.dest(server__path));
+});
+gulp.task('inline-js', ['scripts', 'html'], function() {
+    gulp.src(html__build + '/index.html')
+        .pipe(inline())
+        .pipe(gulp.dest(server__path));
+});
+gulp.task('inline-sass', ['styles', 'html'], function() {
+    gulp.src(html__build + '/index.html')
+        .pipe(inline())
+        .pipe(gulp.dest(server__path));
+});
+gulp.task('inline-html', ['html'], function() {
     gulp.src(html__build + '/index.html')
         .pipe(inline())
         .pipe(gulp.dest(server__path));
 });
 
-
-//  05__Serve
+//  06__Serve
 //
 gulp.task('serve', ['inline'], function() {
-    sync.init({ server: server__path }); // declare server
-    gulp.watch(js__src,   ['inline']);   // on js change
-    gulp.watch(sass__src, ['inline']);   // on sass change
-    gulp.watch(html__src, ['inline']);   // on html change
+    sync.init({ server: server__path });    // declare server
+    gulp.watch(js__src,   ['inline-js']);   // on js change
+    gulp.watch(sass__src, ['inline-sass']); // on sass change
+    gulp.watch(html__src, ['inline-html']); // on html change
 });
 
 //  Default
