@@ -63,7 +63,7 @@ gulp.task('html', function() {
 gulp.task('imagemin', function(cb) {
     gulp.src([img__src + '*', img__src + '/*.jpg'])
         .pipe(imagemin({
-            optimizationLevel: 5,
+            optimizationLevel: 3,
             progressive: true,
             interlaced: true
         }))
