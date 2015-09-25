@@ -186,37 +186,37 @@ optgroup {
   font-family: 'AvenirHeavy';
   font-weight: normal;
   font-style: normal;
-  src: url("../font/avenir/AvenirHeavy-webfont.eot");
-  src: url("../font/avenir/AvenirHeavy-webfont.eot?#iefix") format("embedded-opentype"), url("../font/avenir/AvenirHeavy-webfont.woff") format("woff"), url("../font/avenir/AvenirHeavy-webfont.ttf") format("truetype"), url("../font/avenir/AvenirHeavy-webfont.svg#AvenirHeavy") format("svg");
+  src: url("font/avenir/AvenirHeavy-webfont.eot");
+  src: url("font/avenir/AvenirHeavy-webfont.eot?#iefix") format("embedded-opentype"), url("font/avenir/AvenirHeavy-webfont.woff") format("woff"), url("font/avenir/AvenirHeavy-webfont.ttf") format("truetype"), url("font/avenir/AvenirHeavy-webfont.svg#AvenirHeavy") format("svg");
   -webkit-font-smoothing: subpixel-antialiased !important; }
 
 @font-face {
   font-family: 'AvenirMedium';
   font-weight: normal;
   font-style: normal;
-  src: url("../font/avenir/avenirltstd-medium-webfont.eot");
-  src: url("../font/avenir/avenirltstd-medium-webfont.eot?#iefix") format("embedded-opentype"), url("../font/avenir/avenirltstd-medium-webfont.woff") format("woff"), url("../font/avenir/avenirltstd-medium-webfont.ttf") format("truetype"), url("../font/avenir/avenirltstd-medium-webfont.svg#AvenirMed") format("svg");
+  src: url("font/avenir/avenirltstd-medium-webfont.eot");
+  src: url("font/avenir/avenirltstd-medium-webfont.eot?#iefix") format("embedded-opentype"), url("font/avenir/avenirltstd-medium-webfont.woff") format("woff"), url("font/avenir/avenirltstd-medium-webfont.ttf") format("truetype"), url("font/avenir/avenirltstd-medium-webfont.svg#AvenirMed") format("svg");
   -webkit-font-smoothing: subpixel-antialiased !important; }
 
 @font-face {
   font-family: 'AvenirRegular';
   font-weight: normal;
   font-style: normal;
-  src: url("../font/avenir/avenirltstd-roman-webfont.eot");
-  src: url("../font/avenir/avenirltstd-roman-webfont.eot?#iefix") format("embedded-opentype"), url("../font/avenir/avenirltstd-roman-webfont.woff") format("woff"), url("../font/avenir/avenirltstd-roman-webfont.ttf") format("truetype"), url("../font/avenir/avenirltstd-roman-webfont.svg#AvenirRegular") format("svg");
+  src: url("font/avenir/avenirltstd-roman-webfont.eot");
+  src: url("font/avenir/avenirltstd-roman-webfont.eot?#iefix") format("embedded-opentype"), url("font/avenir/avenirltstd-roman-webfont.woff") format("woff"), url("font/avenir/avenirltstd-roman-webfont.ttf") format("truetype"), url("font/avenir/avenirltstd-roman-webfont.svg#AvenirRegular") format("svg");
   -webkit-font-smoothing: subpixel-antialiased !important; }
 
 @font-face {
   font-family: "SourceCodePro";
-  src: url("../font/sourcecodepro/SourceCodePro-Regular.eot");
-  src: url("../font/sourcecodepro/SourceCodePro-Regular.eot?#iefix") format("embedded-opentype"), url("../font/sourcecodepro/SourceCodePro-Regular.woff") format("woff"), url("../font/sourcecodepro/SourceCodePro-Regular.ttf") format("truetype"), url("../font/sourcecodepro/SourceCodePro-Regular.svg#SourceCodePro-Regular") format("svg");
+  src: url("font/sourcecodepro/SourceCodePro-Regular.eot");
+  src: url("font/sourcecodepro/SourceCodePro-Regular.eot?#iefix") format("embedded-opentype"), url("font/sourcecodepro/SourceCodePro-Regular.woff") format("woff"), url("font/sourcecodepro/SourceCodePro-Regular.ttf") format("truetype"), url("font/sourcecodepro/SourceCodePro-Regular.svg#SourceCodePro-Regular") format("svg");
   font-weight: 400;
   font-style: normal; }
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url("../../font/font-awesome/fontawesome-webfont.eot");
-  src: url("../../font/font-awesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../../font/font-awesome/fontawesome-webfont.woff2") format("woff2"), url("../../font/font-awesome/fontawesome-webfont.woff") format("woff"), url("../../font/font-awesome/fontawesome-webfont.ttf") format("truetype"), url("../../font/font-awesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
+  src: url("font/font-awesome/fontawesome-webfont.eot");
+  src: url("font/font-awesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("font/font-awesome/fontawesome-webfont.woff2") format("woff2"), url("font/font-awesome/fontawesome-webfont.woff") format("woff"), url("font/font-awesome/fontawesome-webfont.ttf") format("truetype"), url("font/font-awesome/fontawesome-webfont.svg#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
