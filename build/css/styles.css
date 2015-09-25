@@ -7142,3 +7142,8 @@ h3 {
 .show__btn .btn {
   margin-bottom: 27px;
   margin-bottom: 1.5rem; }
+
+.show__btn__dropdown {
+  margin: -0.75em; }
+  .show__btn__dropdown .btn-group {
+    margin: 0.75em; }

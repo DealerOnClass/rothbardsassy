@@ -102,3 +102,10 @@ h3 {
         @include rhythm-rem(margin-bottom, 1);
     }
 }
+
+.show__btn__dropdown {
+    margin: rhythm(-.5);
+    .btn-group {
+        margin: rhythm(.5);
+    }
+}
